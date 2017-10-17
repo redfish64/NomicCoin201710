@@ -1,8 +1,5 @@
 import Data.Vect
  
-||| Constant Types
-data ANTConst = I Int | BI Integer | Fl Double | Ch Char | Str String
- 
 ||| Context
 ||| @n total number of vars
 data ANTContext : {n : Nat} -> Type
@@ -22,8 +19,10 @@ data ANTContext : {n : Nat} -> Type where
   |||  G;\x:S |- valid
   AddVar : (ctx : ANTContext {n}) -> Expr ctx -> ANTContext {n=(S n)}
 
-getExprLemma1 : ANTContext -> Expr ctx -> Expr (AddVar ctx val)
+getExprLemma1 : ANTContext -> Expr ctx -> Expr (AddVar ctx unrelatedVar)
 
+||| TODO 2 getExpr doesn't prove it's getting the right expression
+||| it could return anything
 getExpr : {n : Nat} -> (ctx : ANTContext {n}) -> Fin n -> Expr ctx
 getExpr {n = Z} Empty FZ impossible
 getExpr {n = Z} Empty (FS _) impossible
@@ -33,6 +32,7 @@ getExpr {n = (S k)} (AddVar ctx val) (FS x) = getExprLemma1 ctx (getExpr ctx x)
 betaEq : Expr ctx -> Expr ctx -> Type
 betaEq = ?x
 
+-- I Int | BI Integer | Fl Double | Ch Char | Str String
  
 ||| This represents when a context implies something. It is laid out
 ||| as the basic rules of the type theory system
@@ -40,15 +40,17 @@ betaEq = ?x
 data Expr : ANTContext -> Type where
   |||  G |- valid
   |||  ------------
+  |||  G |- Int : Type(0)
+  ||| Part 1: the type "Int" can be implied from any context
+  IntT : {ctx : ANTContext} -> Expr ctx
+
+  |||  G |- valid
+  |||  ------------
   |||  G |- Type(n) : Type(n+1)
   ||| Part 1: Every context implies Type(n) exists
   ||| Part 2 of this, that TypeN has a Type(n+1) is in data ANTType
   TypeN : (n : Nat) -> (g : ANTContext) -> Expr g
 
-  -- |||  G |- valid
-  -- |||  ------------
-  -- |||  G |- i : Type(0)
-  -- ConstI : {n : Nat} -> ANTContext {n} -> 
   
   |||     G |- f : (x : S) -> T   G |- s : S
   ||| App ----------------------------------
@@ -67,7 +69,12 @@ data Expr : ANTContext -> Type where
   Lam : (ctx : ANTContext) -> (argType : Expr ctx)
     -> Expr (AddVar ctx argType) -> Expr ctx
 
-||| This is an expression with an associated type
+||| This is an expression with an associated type.  
+|||
+||| Note that the type is just a plain expression, even though, every
+||| expression must have a type. This is because we can't have a typed
+||| expression refer to itself in it's declaration, or it becomes an
+||| infinite loop.
 data ANTTypedExp : {ctx : ANTContext} -> (exp : Expr ctx) -> (typ : Expr ctx) -> Type where
   |||  G |- valid
   |||  ------------
@@ -75,6 +82,11 @@ data ANTTypedExp : {ctx : ANTContext} -> (exp : Expr ctx) -> (typ : Expr ctx) ->
   ||| Part 2 TypeN has a Type(n+1) is in data ANTType
   TypeSNofN : (n : Nat) -> (g : ANTContext) -> ANTTypedExp (TypeN n g) (TypeN (S n) g)
   
+  |||  G |- valid
+  |||  ------------
+  |||  G |- Int : Type(0)
+  ||| Part 2 The type of Int is Type(0)
+  Type0OfConstI : (i : Int) -> (g : ANTContext) -> ANTTypedExp IntT (TypeN 0 g)
 
 
 getExprLemma1 x y = ?getExprLemma1_rhs
