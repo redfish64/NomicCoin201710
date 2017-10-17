@@ -4,7 +4,7 @@ import Data.Vect
 ||| @n total number of vars
 data ANTContext : {n : Nat} -> Type
 data Expr : ANTContext -> Type
-data ANTTypedExp : (ctx : ANTContext) -> (exp : Expr ctx) -> (typ : Expr ctx) -> Type 
+data ANTTypedExp : (ctx : ANTContext) -> Type 
  
  
 ||| Modeled from https://eb.host.cs.st-andrews.ac.uk/drafts/impldtp.pdf page 10
@@ -22,12 +22,8 @@ data ANTContext : {n : Nat} -> Type where
 getExprLemma1 : ANTContext -> Expr ctx -> Expr (AddVar ctx unrelatedVar)
 
 ||| TODO 2 getExpr doesn't prove it's getting the right expression
-||| it could return anything
-getExpr : {n : Nat} -> (ctx : ANTContext {n}) -> Fin n -> Expr ctx
-getExpr {n = Z} Empty FZ impossible
-getExpr {n = Z} Empty (FS _) impossible
-getExpr {n = (S k)} (AddVar ctx val) FZ = getExprLemma1 ctx val
-getExpr {n = (S k)} (AddVar ctx val) (FS x) = getExprLemma1 ctx (getExpr ctx x)
+||| it could return anything. We need a view
+getExpr : {n : Nat} -> (ctx : ANTContext {n}) -> Fin n -> ANTTypedExp ctx
    
 betaEq : Expr ctx -> Expr ctx -> Type
 betaEq = ?x
@@ -51,6 +47,10 @@ data Expr : ANTContext -> Type where
   ||| Part 2 of this, that TypeN has a Type(n+1) is in data ANTType
   TypeN : (n : Nat) -> (g : ANTContext) -> Expr g
 
+  |||  G |- valid
+  |||  ------------
+  |||  G |- i : Int
+  IntC : {g : ANTContext} -> (i : Int) -> Expr g
   
   |||     G |- f : (x : S) -> T   G |- s : S
   ||| App ----------------------------------
@@ -86,7 +86,18 @@ data ANTTypedExp : {ctx : ANTContext} -> (exp : Expr ctx) -> (typ : Expr ctx) ->
   |||  ------------
   |||  G |- Int : Type(0)
   ||| Part 2 The type of Int is Type(0)
-  Type0OfConstI : (i : Int) -> (g : ANTContext) -> ANTTypedExp IntT (TypeN 0 g)
+  Type0OfIntT : (i : Int) -> (g : ANTContext) -> ANTTypedExp IntT (TypeN 0 g)
+
+  |||  G |- valid
+  |||  ------------
+  |||  G |- Int : Type(0)
+  ||| Part 2 The type of IntC is IntT
+  IntTOfInt : (i : Int) -> (g : ANTContext) -> ANTTypedExp (IntC i) IntT
 
 
 getExprLemma1 x y = ?getExprLemma1_rhs
+
+getExpr {n = Z} Empty FZ impossible
+getExpr {n = Z} Empty (FS _) impossible
+getExpr {n = (S k)} (AddVar ctx val) FZ = getExprLemma1 ctx val
+getExpr {n = (S k)} (AddVar ctx val) (FS x) = getExprLemma1 ctx (getExpr ctx x)
