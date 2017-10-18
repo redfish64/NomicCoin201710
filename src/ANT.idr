@@ -4,7 +4,7 @@ import Data.Vect
 ||| @n total number of vars
 data ANTContext : {n : Nat} -> Type
 data Expr : ANTContext -> Type
-data ANTTypedExp : (ctx : ANTContext) -> Type 
+data ANTTypedExp : {ctx : ANTContext} -> (exp : Expr ctx) -> (typ : Expr ctx) -> Type where
  
  
 ||| Modeled from https://eb.host.cs.st-andrews.ac.uk/drafts/impldtp.pdf page 10
