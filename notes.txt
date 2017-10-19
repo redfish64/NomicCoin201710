@@ -1,0 +1,60 @@
+
+We have a TypedExp with a value and a type.
+
+A context. This is used to restrict a typed expr to only vars within a context.
+The inner value of a lam, pi, or let get a var added to them.
+
+A problem is that for a TypedExp, it needs a TypedExp as it's type,
+and so on. We can't reference a TypedExp in the declaration of itself,
+so we need another way.
+
+Can the type be computed? From what I read, no, but I don't exactly
+understand why.
+
+In isolation, of course it cannot, because a type may contain vars and
+other functions that need to be executed that are expected to be in
+the context.
+
+What if we had a function, typeForExp : Expr -> Expr
+
+Maybe typeForExp can return a pair with a proof that its return value
+is the type for the expr according to some rules.
+
+For AddLamVar:
+
+We need an outer context, and a type for the var. The type of the type must be of
+type Type n (ie. you can't write a lam (x : 3 -> _))
+
+The problem is that we can't construct an exp, using its data
+constructor "TypeN", because ANTExpr also wants to construct a
+context, using its data constructor "AddLamVar"
+
+Two data types can't mutually use each others constructors.
+
+We also can't create a TypedExpr, for reasons above (recursive data's
+witin their type, ie not in their data constructors).
+
+---
+
+We will do Pi before Lam, since Lam needs to construct a Pi expression
+as its type
+
+--
+
+ |-- ANT.idr line 97 col 32:
+ |   When checking type of Lam:
+ |   When checking argument T to Main.Pi:
+ |           Unifying g and AddPiVar g S' prf would lead to infinite value
+
+The problem here is that  (typeForExp (Pi g S' prf T) uses a T that
+is in the same context as S'. However Pi demands (T : ANTExp (AddPiVar g S' prf))
+
+T is in both.
+
+I think we either need to allow expressions to exist in multiple contexts
+or create multiple versions of the same expression that are linked together
+yet have different contexts.
+
+The concept here is that if an exp exists in Context A, then it also exists
+in AddPiVar(Context A), or AddLamVar(Context A). Soon we'll have AddLetVar(Context A)
+as well and will have to deal with it as well.
