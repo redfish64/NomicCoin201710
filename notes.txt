@@ -94,4 +94,35 @@ So we get to here and there, because that is what Implies is, really.
 And List is what a context is, really. Well, except that it's a list
 of a bunch of arguments, binder, S', and prf that the type of S' is a type
 
-Maybe we could have a Binding to represent it
+Maybe we could have a Binding to represent it.
+
+However, maybe I'm getting ahead of myself, I don't want things too
+complicated just to add abstraction
+
+---
+
+Getting rid of Binder, because Let requires two exp, type and value, whereas
+Lam and Pi only require one
+
+---
+
+Adding a LetBinding. I'm not sure why there is a Let in Idris core lang, rather
+than just App (Lam x : S) s. Maybe it has something to do with substitution.
+Anyway, I'm staying true to it, even though I don't understand the purpose.
+
+---
+
+An ANTContext is more than just a list of bindings, because the bindings
+have to be for the context
+
+I think we are going in circles, here. Forget the list, it's more
+complex than a list, since a list allows any object of type elem to be
+added, but a binding needs to have it's variables based on the context or below.
+
+---
+
+Anytime you add a variable to an ANTContext, any expression that was
+valid in the previous context is valid in the current one, too.
+
+Before I start to abstract this out, I think I need to implement var
+references so I don't screw it up.

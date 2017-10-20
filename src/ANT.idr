@@ -1,7 +1,19 @@
 import Data.Vect
 ||| Modeled from https://eb.host.cs.st-andrews.ac.uk/drafts/impldtp.pdf page 10
 
-data ANTContext :  {n : Nat} -> Type 
+data ANTContext : {n: Nat} -> Type
+
+data Binding : ANTContext -> Type
+
+||| All contexts that are definable using this structure are valid.
+|||
+||| They can have variables added into them as specified by Binding
+data ANTContext : {n: Nat} -> Type where
+  Empty : ANTContext {n=0}
+  AddBinding : (ctx : ANTContext {n=n}) 
+                -> (b : Binding ctx)
+                -> ANTContext {n=S n}
+
 data ANTExp : ANTContext -> Type
 
 ||| This simple returns TypeN
@@ -11,8 +23,145 @@ mkTypeN : (g : ANTContext) -> Nat -> ANTExp g
 
 typeForExp : {g : ANTContext} -> ANTExp g -> ANTExp g
 
-data Binder = LamBinder | PiBinder --| LetBinder
+||| A context A encompess context B if any expression that is implied
+||| by B can also be implied by A. This means that no matter what vars
+||| are added to a context, it still implies *at least* the same
+||| expressions as it did before
+data IsContextEncompesses : (anc : ANTContext) -> (des : ANTContext)
+     -> Type where
+  Self : {self : ANTContext} -> IsContextEncompesses {anc=self} self
+  Parent : (b : Binding anc) -> (prf : IsContextEncompesses anc des) 
+         -> IsContextEncompesses (AddBinding anc b) des
+  
 
+||| Represents a variable into the context. Note this is not the same thing
+||| as creating a Lam/Pi/Let Expression. It is rather the resulting
+||| context to be used *within* the body of a lam/pi/let expression that
+||| has been created. Ex:
+|||
+||| Let x = (16 : Int) in (....)
+|||                        ^^^^-- binding should be added to context for this part
+|||
+||| See ANTExp.Lam to create a Lam, etc.
+|||
+data Binding : (ctx : ANTContext) -> Type where
+  |||  G |- S' : Type(i)
+  |||  ------------------
+  |||  G;\x:S' |- valid
+  LamBinding : (S' : ANTExp ctx) 
+            -> (typeForExp S' = (mkTypeN ctx i)) -> Binding ctx
+
+  |||  G |- S' : Type(i)
+  |||  ------------------
+  |||  G;forall x:S' |- valid
+  PiBinding : (S' : ANTExp ctx) 
+            -> (typeForExp S' = (mkTypeN ctx i)) -> Binding ctx
+
+  |||  G |- S' : Type(i)    G |- s : S'
+  |||  --------------------------------
+  |||  G;let x = s : S' |- valid
+  LetBinding : (S' : ANTExp ctx) 
+            -> (typeForExp S' = (mkTypeN ctx i)) 
+            -> (s : ANTExp ctx)
+            -> (typeForExp s = S')
+            -> Binding ctx
+
+||| This is a *valid* expression of the context. An expression can
+||| only be created if a context implies it by running one or more of
+||| its base rules
+|||
+||| Basically if a rule ends in:
+|||    ....
+|||    -------
+|||    G |- x
+||| then this represents that "G |- x" is true, according to the rules
+data ANTExp : ANTContext -> Type where
+  |||       G |- valid
+  |||  Type ------------
+  |||       G |- Type(n) : Type(n+1)
+  ||| Part 1: Every context implies Type(n) exists
+  ||| Part 2 of this, that TypeN has a Type(n+1) is in typeForExpr
+  TypeN : (g : ANTContext) -> (n : Nat) -> ANTExp g
+  
+  |||       (\x:S) in G
+  |||  Var1 ------------
+  |||       G |- x : S
+  |||
+  |||       (forall x:S) in G
+  |||  Var2 ------------
+  |||       G |- x : S
+  |||
+  |||       (let x = s : S) in G
+  |||  Var3 ------------
+  |||       G |- x : S
+  ||| Part 1: A valid var lookup
+  ||| Part 2 of this, that x has a type of S, is in typeForExpr
+  Var : (g : ANTContext {n} ) -> (n : Fin n) -> ANTExp g
+
+  |||         G;forall x:S' |- T : Type(m)    G |- S' : Type(n)
+  ||| Forall  ------------------------------------------------- (Exists(p).m <= p, n <= p)
+  |||         G |- (x : S') -> T : Type(p)
+  |||
+  ||| Note that T is in (G;forall x:S'), but even so, (x : S') -> T is
+  ||| in G The idea being if you can create a context from G that has
+  ||| the additional "forall x:S'" in it and it implies that T exists,
+  ||| then you can say that "(x : S') -> T" aka "forall x:S'.T" is implied
+  ||| in G
+  -- TODO 2 this only represents that (x : S') -> T is created, it doesn't specify
+  --  the type as Type(p).. should we specify type in typeForExp??? seems so
+  Pi : { n : Nat }
+    -> { m : Nat }
+    -> (g : ANTContext) 
+    -> (S' : ANTExp g) 
+    -> (prf : typeForExp S' = (mkTypeN g n))
+    -> (T : ANTExp (AddBinding g (PiBinding S' prf)))
+    -> ANTExp g
+
+
+  -- |||     G;\x:S' |- e : T   G |- (x : S') -> T : Type(n)
+  -- ||| Lam ---------------------------------------------
+  -- |||     G |- \x:S'.e : (x : S') -> T
+  -- |||
+  -- ||| Given a context, an arg type within that context, and an expression
+  -- ||| that uses that var, returns a Lam (variable name not specified
+  -- ||| since we are using DeBrujin indexes)
+  -- Lam : {n : Nat} 
+  --   -> (g : ANTContext) 
+  --   -> (S' : ANTExp g) 
+  --   -> (prf : typeForExp S' = (mkTypeN ctx i)) -- necessary because AddLamVar needs it
+  --   -> (T : ANTExp g) 
+  --   -> (typeForExp (Pi g S' prf ?lemmaVarStillExistsInUpdatedContext) = (mkTypeN g k))
+  --   -> (e : ANTExp (AddPiVar g S' prf))
+  --   -> (typeForExp e = T)
+  --   -> ANTExp g
+
+mkTypeN g k = TypeN g k
+
+
+{-
+
+-- lemmaVarStillExists : (g : ANTContext) -> (e : ANTExp g) 
+--                     -> (e2 : ANTExp (AddVar g binder 
+
+
+lemmaLamTypeOfTypeIsTypeN : (n : Nat) -> (argType : ANTExp g) -> (i : Nat) 
+                    -> typeForExp argType = mkTypeN g i
+
+lemmaPiTypeOfTypeIsTypeN : (n : Nat) -> (argType : ANTExp g) -> (i : Nat) 
+  -> typeForExp argType = mkTypeN g i
+
+
+    
+
+typeForExp (TypeN g n) = TypeN g (S n)
+--typeForExp (Lam g argType exp) = ?typeForExp_rhs_2
+typeForExp (Pi g S' prf T) = TypeN g ?chooseNForPi 
+  where 
+    chooseNForPi : {g : ANTContext} -> ANTExp g -> ANTExp g -> Nat
+    chooseNForPi x y = ?chooseNForPi_rhs
+    
+
+{-    
 ||| All contexts that are definable using this structure are valid.
 |||
 ||| They can have variables added into them.  Variables come in 3
@@ -49,75 +198,7 @@ data ANTContext :  {n : Nat} -> Type where
     -> (typeForExp S' = (mkTypeN ctx i))
     -> ANTContext {n=n} -- HACK {n=S n}
 
-
-lemmaLamTypeOfTypeIsTypeN : (n : Nat) -> (argType : ANTExp g) -> (i : Nat) 
-                    -> typeForExp argType = mkTypeN g i
-
-lemmaPiTypeOfTypeIsTypeN : (n : Nat) -> (argType : ANTExp g) -> (i : Nat) 
-  -> typeForExp argType = mkTypeN g i
-
-
-    
-||| This is a *valid* expression of the context. An expression can
-||| only be created if a context implies it by running one or more of
-||| its base rules
-data ANTExp : ANTContext -> Type where
-  |||  G |- valid
-  |||  ------------
-  |||  G |- Type(n) : Type(n+1)
-  ||| Part 1: Every context implies Type(n) exists
-  ||| Part 2 of this, that TypeN has a Type(n+1) is in typeForExpr
-  TypeN : (g : ANTContext) -> (n : Nat) -> ANTExp g
-
-  |||         G;forall x:S' |- T : Type(m)    G |- S' : Type(n)
-  ||| Forall  ------------------------------------------------- (Exists(p).m <= p, n <= p)
-  |||         G |- (x : S') -> T : Type(p)
-  |||
-  ||| Note that T is in (G;forall x:S'), but even so, (x : S') -> T is
-  ||| in G The idea being if you can create a context from G that has
-  ||| the additional "forall x:S'" in it and it implies that T exists,
-  ||| then you can say that "(x : S') -> T" aka "forall x:S'.T" is implied
-  ||| in G
-  -- TODO 2 this only represents that (x : S') -> T is created, it doesn't specify
-  --  the type as Type(p).. should we specify type in typeForExp??? seems so
-  Pi : { n : Nat }
-    -> { m : Nat }
-    -> (g : ANTContext) 
-    -> (S' : ANTExp g) 
-    -> (prf : typeForExp S' = (mkTypeN g n))
-    -> (T : ANTExp (AddVar g PiBinder S' prf))
-    -> ANTExp g
-
-
-  -- |||     G;\x:S' |- e : T   G |- (x : S') -> T : Type(n)
-  -- ||| Lam ---------------------------------------------
-  -- |||     G |- \x:S'.e : (x : S') -> T
-  -- |||
-  -- ||| Given a context, an arg type within that context, and an expression
-  -- ||| that uses that var, returns a Lam (variable name not specified
-  -- ||| since we are using DeBrujin indexes)
-  -- Lam : {n : Nat} 
-  --   -> (g : ANTContext) 
-  --   -> (S' : ANTExp g) 
-  --   -> (prf : typeForExp S' = (mkTypeN ctx i)) -- necessary because AddLamVar needs it
-  --   -> (T : ANTExp g) 
-  --   -> (typeForExp (Pi g S' prf ?lemmaVarStillExistsInUpdatedContext) = (mkTypeN g k))
-  --   -> (e : ANTExp (AddPiVar g S' prf))
-  --   -> (typeForExp e = T)
-  --   -> ANTExp g
-
-mkTypeN g k = TypeN g k
-
-typeForExp (TypeN g n) = TypeN g (S n)
---typeForExp (Lam g argType exp) = ?typeForExp_rhs_2
-typeForExp (Pi g S' prf T) = TypeN g ?chooseNForPi 
-  where 
-    chooseNForPi : {g : ANTContext} -> ANTExp g -> ANTExp g -> Nat
-    chooseNForPi x y = ?chooseNForPi_rhs
-    
-
-{-    
-  |||  G |- S : Type(i)
+    |||  G |- S : Type(i)
   |||  ------------------
   |||  G;forall x:S |- valid
   AddForallVar : {S : Expr} -> {i : Nat} -> (ctx : ANTContext) 
@@ -291,4 +372,5 @@ data ANTContext :  {n : Nat} -> Type where
     -> (S : ContextualExpr ctx (TypeN i))
     -> ANTContext {n=S n}
 
+-}
 -}
