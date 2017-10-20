@@ -126,3 +126,28 @@ valid in the previous context is valid in the current one, too.
 
 Before I start to abstract this out, I think I need to implement var
 references so I don't screw it up.
+
+---
+
+wrt ContextEncompasses
+
+Which direction should it go? Actually it's a little wrong, isn't it.
+The vars of a child context *can* replace those of a parent if we
+aren't using debrujin.
+
+The odd thing is that we aren't using debrujin correctly right now,
+because as we go inwards, we are increasing the count. It should be
+the opposite to work like debrujin.
+
+Ah, no we're not. Because the first binding you take off is the first
+element of the "list" that the context is.
+
+However, this all depends on our definition of Var, and which end does
+it take from. It seems that it would have to take from the far end, though...
+ie If there are 3 vars in the Context, then Var 2 would take from the front
+and Var 0 would take from the back.
+
+This way we won't have to shift var references everytime we add a var. We
+couldn't do this anyway.
+
+So yes, reverse debrujin

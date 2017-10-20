@@ -23,15 +23,23 @@ mkTypeN : (g : ANTContext) -> Nat -> ANTExp g
 
 typeForExp : {g : ANTContext} -> ANTExp g -> ANTExp g
 
-||| A context A encompess context B if any expression that is implied
-||| by B can also be implied by A. This means that no matter what vars
+||| Context B encompass context A if any expression that is implied
+||| by A can also be implied by B. This means that no matter what vars
 ||| are added to a context, it still implies *at least* the same
-||| expressions as it did before
-data IsContextEncompesses : (anc : ANTContext) -> (des : ANTContext)
+||| expressions as it did before. B is a descendent of A
+|||
+||| In other words, an *inner* context can reference anything from
+||| an *outer* context, and all context applied in the outer also
+||| apply to the inner.
+|||
+||| Ex: let x = (15 : Int) in (let y = 3 : Int) in x + y)
+|||                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^ -- outer context (A), x is defined
+|||      inner context (B), x and y are defined -- ^^^^^
+data ContextEncompasses : (des : ANTContext) -> (anc : ANTContext)
      -> Type where
-  Self : {self : ANTContext} -> IsContextEncompesses {anc=self} self
-  Parent : (b : Binding anc) -> (prf : IsContextEncompesses anc des) 
-         -> IsContextEncompesses (AddBinding anc b) des
+  Self : {self : ANTContext} -> ContextEncompasses self self
+  Parent : (b : Binding anc) -> (prf : ContextEncompasses des anc) 
+         -> ContextEncompasses des (AddBinding anc b)
   
 
 ||| Represents a variable into the context. Note this is not the same thing
@@ -76,6 +84,19 @@ data Binding : (ctx : ANTContext) -> Type where
 |||    G |- x
 ||| then this represents that "G |- x" is true, according to the rules
 data ANTExp : ANTContext -> Type where
+
+  ||| This is our own made up rule. It's not in the design doc, but it
+  ||| inherently implied:
+  |||
+  |||  G |- X
+  |||  ---------
+  |||  G;a |- X
+  |||
+  ||| It means that if you add a variable to G, everything that G implied
+  ||| before is still valid
+  ContextEncompassesImpliesSame :
+    (ce : ContextEncompasses desc anc) -> ANTExp anc -> ANTExp desc
+
   |||       G |- valid
   |||  Type ------------
   |||       G |- Type(n) : Type(n+1)
@@ -118,23 +139,29 @@ data ANTExp : ANTContext -> Type where
     -> ANTExp g
 
 
-  -- |||     G;\x:S' |- e : T   G |- (x : S') -> T : Type(n)
+  -- |||     G;\x:S' |- e : T   G |- (x : S') -> T : Type(n)  
   -- ||| Lam ---------------------------------------------
   -- |||     G |- \x:S'.e : (x : S') -> T
   -- |||
+  -- ||| Note, not in rule, but implied (S' : Type(n)... must be because
+  -- ||| that's the only way to create G;\x:S', see Binding
+  -- |||
   -- ||| Given a context, an arg type within that context, and an expression
-  -- ||| that uses that var, returns a Lam (variable name not specified
-  -- ||| since we are using DeBrujin indexes)
+  -- ||| that uses that var, returns a Lam.
   -- Lam : {n : Nat} 
   --   -> (g : ANTContext) 
   --   -> (S' : ANTExp g) 
-  --   -> (prf : typeForExp S' = (mkTypeN ctx i)) -- necessary because AddLamVar needs it
+  --   -> (prf : typeForExp S' = (mkTypeN ctx i)) -- necessary because LamBinding needs it
   --   -> (T : ANTExp g) 
-  --   -> (typeForExp (Pi g S' prf ?lemmaVarStillExistsInUpdatedContext) = (mkTypeN g k))
   --   -> (e : ANTExp (AddPiVar g S' prf))
-  --   -> (typeForExp e = T)
+  --   -> (typeForExp e = (T)
   --   -> ANTExp g
 
+
+-- mkContextLamType : {g : ANTContext} -> {S' : ANTExp g} -> Type
+-- mkContextLamType {g} = Bool 
+
+--    -> (typeForExp (Pi g S' prf ?lemmaVarStillExistsInUpdatedContext) = (mkTypeN g k))
 mkTypeN g k = TypeN g k
 
 
