@@ -58,3 +58,40 @@ yet have different contexts.
 The concept here is that if an exp exists in Context A, then it also exists
 in AddPiVar(Context A), or AddLamVar(Context A). Soon we'll have AddLetVar(Context A)
 as well and will have to deal with it as well.
+
+.
+
+We need to add the concept of two expressions being the same even if
+the contexts are different.
+
+I think we can do this by making a Belongs type. So if belongs to one
+type then it also belongs to its successor.
+
+.
+
+Could we use a list inside of ANTContext? Does Here and There help us for
+proof that a var is in a context?
+
+The problem is that when a context implies something, that doesn't
+necessary mean it has a var associated with it
+
+.
+
+There are two concepts here:
+
+1. An expression was created from a particular context
+
+2. An expression that is implied by one context can also be implied by
+   another
+
+But 1 isn't really important. It doesn't matter where an expression
+was created, only what context imply it.
+
+Although that is true, somewhere, we need to record the fact that the
+expression is implied by at least one context.
+
+So we get to here and there, because that is what Implies is, really.
+And List is what a context is, really. Well, except that it's a list
+of a bunch of arguments, binder, S', and prf that the type of S' is a type
+
+Maybe we could have a Binding to represent it
