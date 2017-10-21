@@ -23,6 +23,7 @@ mkTypeN : (g : ANTContext) -> Nat -> ANTExp g
 
 typeForExp : {g : ANTContext} -> ANTExp g -> ANTExp g
 
+
 ||| Context B encompass context A if any expression that is implied
 ||| by A can also be implied by B. This means that no matter what vars
 ||| are added to a context, it still implies *at least* the same
@@ -38,10 +39,9 @@ typeForExp : {g : ANTContext} -> ANTExp g -> ANTExp g
 data ContextEncompasses : (des : ANTContext) -> (anc : ANTContext)
      -> Type where
   Self : {self : ANTContext} -> ContextEncompasses self self
-  Parent : (b : Binding anc) -> (prf : ContextEncompasses des anc) 
+  Child : (b : Binding anc) -> {prf : ContextEncompasses des anc}
          -> ContextEncompasses des (AddBinding anc b)
   
-
 ||| Represents a variable into the context. Note this is not the same thing
 ||| as creating a Lam/Pi/Let Expression. It is rather the resulting
 ||| context to be used *within* the body of a lam/pi/let expression that
@@ -74,6 +74,12 @@ data Binding : (ctx : ANTContext) -> Type where
             -> (typeForExp s = S')
             -> Binding ctx
 
+
+--isEquivalentExp : ANTExp des -> ANTExp anc -> ContextEncompasses des anc -> Type
+
+pushDownType : (b: Binding g) -> ANTExp g -> ANTExp (AddBinding g b)
+pushDownType b x = (ContextEncompassesImpliesSame 
+
 ||| This is a *valid* expression of the context. An expression can
 ||| only be created if a context implies it by running one or more of
 ||| its base rules
@@ -92,8 +98,8 @@ data ANTExp : ANTContext -> Type where
   |||  ---------
   |||  G;a |- X
   |||
-  ||| It means that if you add a variable to G, everything that G implied
-  ||| before is still valid
+  ||| It means that if you add a new variable, a to G, everything that
+  ||| G implied before is still valid
   ContextEncompassesImpliesSame :
     (ce : ContextEncompasses desc anc) -> ANTExp anc -> ANTExp desc
 
@@ -139,25 +145,27 @@ data ANTExp : ANTContext -> Type where
     -> ANTExp g
 
 
-  -- |||     G;\x:S' |- e : T   G |- (x : S') -> T : Type(n)  
-  -- ||| Lam ---------------------------------------------
-  -- |||     G |- \x:S'.e : (x : S') -> T
-  -- |||
-  -- ||| Note, not in rule, but implied (S' : Type(n)... must be because
-  -- ||| that's the only way to create G;\x:S', see Binding
-  -- |||
-  -- ||| Given a context, an arg type within that context, and an expression
-  -- ||| that uses that var, returns a Lam.
-  -- Lam : {n : Nat} 
-  --   -> (g : ANTContext) 
-  --   -> (S' : ANTExp g) 
-  --   -> (prf : typeForExp S' = (mkTypeN ctx i)) -- necessary because LamBinding needs it
-  --   -> (T : ANTExp g) 
-  --   -> (e : ANTExp (AddPiVar g S' prf))
-  --   -> (typeForExp e = (T)
-  --   -> ANTExp g
+  |||     G;\x:S' |- e : T   G |- (x : S') -> T : Type(n)  
+  ||| Lam ---------------------------------------------
+  |||     G |- \x:S'.e : (x : S') -> T
+  |||
+  ||| Note, not in rule, but implied (S' : Type(n))... must be because
+  ||| that's the only way to create G;\x:S', see Binding
+  |||
+  ||| Given a context, an arg type within that context, and an expression
+  ||| that uses that var, returns a Lam.
+  Lam : (g : ANTContext {n=i}) 
+    -> (S' : ANTExp g) 
+    -> (prf : typeForExp S' = (mkTypeN g i)) -- necessary because LamBinding needs it
+    -> (T : ANTExp g) 
+    -> (e : ANTExp (AddBinding g (PiBinding S' prf)))
+    -> (typeForExp e) = (pushDownType (PiBinding S' prf) T)
+    -> ANTExp g
 
 
+
+--    -> (prf2 : typeForExp {g=(AddBinding g (PiBinding S' prf))} e)
+-- -> (isEquivalentExp (typeForExp e) ?T ?Parent)
 -- mkContextLamType : {g : ANTContext} -> {S' : ANTExp g} -> Type
 -- mkContextLamType {g} = Bool 
 
