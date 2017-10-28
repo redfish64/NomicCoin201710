@@ -151,3 +151,21 @@ This way we won't have to shift var references everytime we add a var. We
 couldn't do this anyway.
 
 So yes, reverse debrujin
+
+---
+
+I think ChildContextImpliesSame is a bad idea, because given two
+expressions such as TypeN, they are obivous equal, even if in
+completely separate contexts.
+
+---
+
+Reflection
+
+Where is alpha equivalence?
+
+---
+
+New plan, use haskell.
+
+We 

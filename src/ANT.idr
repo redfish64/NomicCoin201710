@@ -77,8 +77,7 @@ data Binding : (ctx : ANTContext) -> Type where
 
 --isEquivalentExp : ANTExp des -> ANTExp anc -> ContextEncompasses des anc -> Type
 
-pushDownType : (b: Binding g) -> ANTExp g -> ANTExp (AddBinding g b)
-pushDownType b x = (ContextEncompassesImpliesSame 
+alphaEq : ANTExp g -> ANTExp g -> Type
 
 ||| This is a *valid* expression of the context. An expression can
 ||| only be created if a context implies it by running one or more of
@@ -100,8 +99,8 @@ data ANTExp : ANTContext -> Type where
   |||
   ||| It means that if you add a new variable, a to G, everything that
   ||| G implied before is still valid
-  ContextEncompassesImpliesSame :
-    (ce : ContextEncompasses desc anc) -> ANTExp anc -> ANTExp desc
+  ChildContextImpliesSame :
+    (parent : ANTContext) -> (b : Binding parent) -> ANTExp parent -> ANTExp (AddBinding parent b)
 
   |||       G |- valid
   |||  Type ------------
@@ -137,7 +136,6 @@ data ANTExp : ANTContext -> Type where
   -- TODO 2 this only represents that (x : S') -> T is created, it doesn't specify
   --  the type as Type(p).. should we specify type in typeForExp??? seems so
   Pi : { n : Nat }
-    -> { m : Nat }
     -> (g : ANTContext) 
     -> (S' : ANTExp g) 
     -> (prf : typeForExp S' = (mkTypeN g n))
@@ -158,18 +156,20 @@ data ANTExp : ANTContext -> Type where
     -> (S' : ANTExp g) 
     -> (prf : typeForExp S' = (mkTypeN g i)) -- necessary because LamBinding needs it
     -> (T : ANTExp g) 
-    -> (e : ANTExp (AddBinding g (PiBinding S' prf)))
-    -> (typeForExp e) = (pushDownType (PiBinding S' prf) T)
+    -> (e : ANTExp (AddBinding g (LamBinding S' prf)))
+    -> alphaEq (typeForExp e) (ChildContextImpliesSame g (LamBinding S' prf) T)
     -> ANTExp g
 
+alphaEq (ChildContextImpliesSame parent b x) (ChildContextImpliesSame parent b y) = alphaEq x y
+alphaEq (ChildContextImpliesSame parent b x) y@(TypeN (AddBinding parent b) n) = alphaEq x y
+alphaEq (ChildContextImpliesSame parent b x) (Var (AddBinding parent b) n2) = Void --TODO this is wrong, because if child is a var, then it could be referencing the same
+alphaEq (ChildContextImpliesSame parent b x) (Pi (AddBinding parent b) S' prf T) = Void
+alphaEq (ChildContextImpliesSame parent b x) (Lam (AddBinding parent b) S' prf T e y) = Void
+alphaEq x@(TypeN g n) y = x = y
+alphaEq x@(Var g n2) y = x = y --TODO 2 this is wrong, because we have to take into account a parent context referencing same var as a child, ChildContextImpliesSame
+alphaEq x@(Pi g S' prf T) y = x = y
+alphaEq x@(Lam g S' prf T e x) y = x = y
 
-
---    -> (prf2 : typeForExp {g=(AddBinding g (PiBinding S' prf))} e)
--- -> (isEquivalentExp (typeForExp e) ?T ?Parent)
--- mkContextLamType : {g : ANTContext} -> {S' : ANTExp g} -> Type
--- mkContextLamType {g} = Bool 
-
---    -> (typeForExp (Pi g S' prf ?lemmaVarStillExistsInUpdatedContext) = (mkTypeN g k))
 mkTypeN g k = TypeN g k
 
 

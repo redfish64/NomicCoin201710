@@ -1,0 +1,21 @@
+#recheck extra-deps next on resolver or cabal file change
+resolver: lts-9.0
+
+packages:
+  - location: .
+
+flags:
+  AN201710:
+    FFI: true
+    GMP: true
+
+ghc-options:
+  AN201710: -fwarn-unused-imports -fwarn-unused-binds
+
+extra-deps:
+  - binary-0.8.5.1
+  - cheapskate-0.1.1
+
+nix:
+  enable: false
+  shell-file: stack-shell.nix
