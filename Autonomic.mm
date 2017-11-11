@@ -1,7 +1,7 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1510032772531" ID="ID_728410656" MODIFIED="1510032842596" TEXT="Autonomic">
-<node CREATED="1482662686966" FOLDED="true" ID="ID_259911855" MODIFIED="1510032830172" POSITION="right" TEXT="agda">
+<node CREATED="1482662686966" ID="ID_259911855" MODIFIED="1510036181689" POSITION="right" TEXT="agda">
 <node CREATED="1482662689102" ID="ID_572924383" MODIFIED="1482666839954" TEXT="internals">
 <node CREATED="1482666839854" ID="ID_555055730" MODIFIED="1506060790644" TEXT="impl">
 <node CREATED="1482662691325" ID="ID_543510742" MODIFIED="1482663962041" TEXT="syntaxes">
@@ -480,7 +480,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1483146608515" FOLDED="true" ID="ID_1238903845" MODIFIED="1503360048893" TEXT="usage">
+<node CREATED="1483146608515" ID="ID_1238903845" MODIFIED="1510036298761" TEXT="usage">
 <node CREATED="1483146613275" ID="ID_1628785136" MODIFIED="1483146643319" TEXT="getInterface loads a module in a way where it effects type checking for the next getInterface call">
 <node CREATED="1483337471304" ID="ID_1541280997" MODIFIED="1483337480524" TEXT="One aspect of this is builtins">
 <node CREATED="1483337481608" ID="ID_122084532" MODIFIED="1483337490340" TEXT="Builtins are updated in the TCM somehow"/>
@@ -488,7 +488,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1482664816941" FOLDED="true" ID="ID_75854235" MODIFIED="1503360049365" TEXT="plan">
+<node CREATED="1482664816941" ID="ID_75854235" MODIFIED="1510036181695" TEXT="plan">
 <node CREATED="1482664819909" ID="ID_1243520786" MODIFIED="1482664828073" TEXT="Use Abstract syntax?">
 <node CREATED="1482664560470" ID="ID_1996495556" MODIFIED="1482664577234" TEXT="may be want we need. Has app, pi, fun, etc."/>
 <node CREATED="1482664615886" ID="ID_101580383" MODIFIED="1482664868583" TEXT="The type checker runs against this (I think)">
@@ -573,7 +573,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1487896640756" FOLDED="true" ID="ID_1257421444" MODIFIED="1503971118008" POSITION="right" TEXT="autonomic mining + solving">
+<node CREATED="1487896640756" ID="ID_1257421444" MODIFIED="1510036502980" POSITION="right" TEXT="autonomic mining + solving">
 <node CREATED="1487896663728" ID="ID_1755350453" MODIFIED="1487896697542" TEXT="(&#x2203; (&#x3bb; x &#x2192; sha256 sha256 (x ++ block_header) &#x2264; max_hash) &#xd7; *something else* ">
 <node CREATED="1487896699529" ID="ID_860004145" MODIFIED="1487896717501" TEXT="*something else* is a stocastically defined problem">
 <node CREATED="1487896737266" ID="ID_1079860689" MODIFIED="1487896823405" TEXT="using a block hash as a seed, randomly associated functions with same output type and a random relation"/>
@@ -582,7 +582,7 @@
 <node CREATED="1487896771586" ID="ID_249507025" MODIFIED="1487896801365" TEXT="somehow, hard to solve problems get saved and incentive to solve them is created"/>
 </node>
 </node>
-<node CREATED="1480463570259" FOLDED="true" ID="ID_646730677" MODIFIED="1510032826668" POSITION="right" TEXT="thoughts">
+<node CREATED="1480463570259" ID="ID_646730677" MODIFIED="1510188201400" POSITION="right" TEXT="thoughts">
 <node CREATED="1475895407904" ID="ID_643132779" MODIFIED="1475895414123" TEXT="agoras sub-context">
 <node CREATED="1475895415457" ID="ID_62764785" MODIFIED="1475895475540" TEXT="provides subsidy to keep security up in the beginning?"/>
 </node>
@@ -618,7 +618,7 @@
 </node>
 <node CREATED="1475904920348" ID="ID_1720833595" MODIFIED="1475904940952" TEXT="How does autonomic determine how much security is necessary?"/>
 <node CREATED="1475904942412" ID="ID_124903628" MODIFIED="1475904950360" TEXT="Will autonomic have oracles?"/>
-<node CREATED="1475905020548" FOLDED="true" ID="ID_194143690" MODIFIED="1480463559545" TEXT="Suppose agoras exists">
+<node CREATED="1475905020548" FOLDED="true" ID="ID_194143690" MODIFIED="1510036178646" TEXT="Suppose agoras exists">
 <node CREATED="1475905235861" ID="ID_305165960" MODIFIED="1475905239808" TEXT="doublespend prevention">
 <node CREATED="1475905026524" ID="ID_1441673511" MODIFIED="1475905037848" TEXT="It wants to assure there is enough security to prevent a double spend">
 <node CREATED="1475905165604" ID="ID_1648166287" MODIFIED="1475905169712" TEXT="Does it need an oracle for this?"/>
@@ -652,7 +652,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1475904052380" FOLDED="true" ID="ID_659314297" MODIFIED="1480463560568" TEXT="presale coin">
+<node CREATED="1475904052380" ID="ID_659314297" MODIFIED="1510057117811" TEXT="presale coin">
 <node CREATED="1475904055867" ID="ID_1963607431" MODIFIED="1475904080215" TEXT="give hmc, stoopkid money as it comes in"/>
 <node CREATED="1475904080651" ID="ID_1251281817" MODIFIED="1475904087944" TEXT="hold the money given in trust"/>
 <node CREATED="1475904089940" ID="ID_1390722189" MODIFIED="1475904099024" TEXT="include agoras somehow?"/>
@@ -668,7 +668,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1477381706115" FOLDED="true" ID="ID_49593062" MODIFIED="1497252363554" TEXT="barendregt">
+<node CREATED="1477381706115" ID="ID_49593062" MODIFIED="1510058298405" TEXT="barendregt">
 <node CREATED="1477381842033" ID="ID_1816500353" MODIFIED="1477381844660" TEXT="my notation">
 <node CREATED="1477381849392" ID="ID_1899274073" MODIFIED="1477381851659" TEXT="&gt;=">
 <node CREATED="1477381852795" ID="ID_602262458" MODIFIED="1477381854746" TEXT="|-"/>
@@ -1015,13 +1015,13 @@
 </node>
 <node CREATED="1477382356160" ID="ID_1504115856" MODIFIED="1477382380357" TEXT="If G&gt;=A:B and G&gt;=A:B&apos; then B (beta equals) B&apos;"/>
 </node>
-<node CREATED="1477114577238" FOLDED="true" ID="ID_1381280979" MODIFIED="1503360042176" TEXT="lennart">
+<node CREATED="1477114577238" ID="ID_1381280979" MODIFIED="1510036091269" TEXT="lennart">
 <node CREATED="1477181078957" ID="ID_369498126" MODIFIED="1477181082350" TEXT="lambda untyped">
 <node CREATED="1477181083343" ID="ID_1337106957" MODIFIED="1477181087311" TEXT="Identity Function">
 <node CREATED="1477181088253" ID="ID_1997990896" MODIFIED="1477181095892" TEXT="Lam &quot;x&quot; $ Var &quot;x&quot; "/>
 </node>
 </node>
-<node CREATED="1477137489243" FOLDED="true" ID="ID_1314878807" MODIFIED="1503360041430" TEXT="lambda simple types">
+<node CREATED="1477137489243" ID="ID_1314878807" MODIFIED="1510036091277" TEXT="lambda simple types">
 <node CREATED="1477137505444" ID="ID_669022596" MODIFIED="1477137510456" TEXT="lam is the only thing with a type">
 <node CREATED="1477137511413" ID="ID_1007781717" MODIFIED="1477137519989" TEXT="The type describes the argument *only*"/>
 <node CREATED="1477137520358" ID="ID_1435769587" MODIFIED="1477137551309" TEXT="A expr that is a lambda is represented by an arrow">
@@ -3152,7 +3152,7 @@
 <node CREATED="1508666027871" ID="ID_1343971136" MODIFIED="1508666509866" TEXT="It will setup the network, and user interface and begin reading blocks"/>
 </node>
 </node>
-<node CREATED="1509016654411" ID="ID_1754238691" MODIFIED="1509016819994" TEXT="10/26/17">
+<node CREATED="1509016654411" FOLDED="true" ID="ID_1754238691" MODIFIED="1510188212090" TEXT="10/26/17">
 <node CREATED="1509016819979" ID="ID_1107323319" MODIFIED="1509019118258" TEXT="plan1">
 <node CREATED="1509016661754" ID="ID_356312359" MODIFIED="1509016815733" TEXT="With the elaborator, I can reference individual terms, and view their implementation in the reflected types"/>
 <node CREATED="1509016699954" ID="ID_1307065166" MODIFIED="1509016808110" TEXT="Given that, I just need to check that each of these terms are not doing anything bad, and are total"/>
@@ -3185,7 +3185,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1509177503948" ID="ID_753758324" MODIFIED="1509177510624" TEXT="10/28/17">
+<node CREATED="1509177503948" FOLDED="true" ID="ID_753758324" MODIFIED="1510188210457" TEXT="10/28/17">
 <node CREATED="1509177511044" ID="ID_213775086" MODIFIED="1509177540544" TEXT="if we create a haskell backend for idris, we no longer need to subvert idris to use it">
 <node CREATED="1509177542780" ID="ID_1793260302" MODIFIED="1509177553064" TEXT="Because we could include idris as a library"/>
 <node CREATED="1509177553943" ID="ID_1901255280" MODIFIED="1509177738921" TEXT="We&apos;d end up with the same problem though, because we&apos;d need to compile the haskel to run it as a c prog"/>
@@ -3226,7 +3226,7 @@
 <node CREATED="1509236358780" ID="ID_786006589" MODIFIED="1509236366935" TEXT="block confirmations and changes"/>
 </node>
 </node>
-<node CREATED="1509783977964" ID="ID_1274800158" MODIFIED="1509961963960" TEXT="11/4/17">
+<node CREATED="1509783977964" ID="ID_1274800158" MODIFIED="1510392021513" TEXT="11/4/17">
 <node CREATED="1509783984770" ID="ID_211950682" MODIFIED="1509783997957" TEXT="Understanding TT (Idris&apos;s kernel language)">
 <node CREATED="1509783998778" ID="ID_426208116" MODIFIED="1509784004966" TEXT="RigCount">
 <node CREATED="1509784005867" ID="ID_308984254" MODIFIED="1509784011581" TEXT="This is erasure of types"/>
@@ -3290,8 +3290,817 @@
 </node>
 </node>
 </node>
+<node CREATED="1510116032543" ID="ID_946166556" MODIFIED="1510117063195" TEXT="11/8/17">
+<node CREATED="1510117063182" ID="ID_65169117" MODIFIED="1510117066041" TEXT="elaboration">
+<node CREATED="1510116049263" ID="ID_1400883904" MODIFIED="1510117117601" TEXT="I believe that Elab processes PDecl (from Parser) and calls Elaborator and Elaborate uses ProofState to generate TT terms"/>
+<node CREATED="1510116095007" ID="ID_1852255563" MODIFIED="1510116110858" TEXT="I also am thinking that Elaborator is used by reflection for elaborator scripting"/>
+<node CREATED="1510117022917" ID="ID_1218840955" MODIFIED="1510117040017" TEXT="From top of Core/Elaborate.hs">
+<node CREATED="1510117040989" ID="ID_1412534958" MODIFIED="1510117046374">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This is our interface to proof construction, rather than ProofState,
+    </p>
+    <p>
+      because this gives us a language to build derived tactics out of the
+    </p>
+    <p>
+      primitives.
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node CREATED="1480463573465" FOLDED="true" ID="ID_697925613" MODIFIED="1510032825585" POSITION="right" TEXT="wiki">
+</node>
+</node>
+<node CREATED="1510123520699" ID="ID_1662300098" MODIFIED="1510123522558" TEXT="istate">
+<node CREATED="1510123523539" ID="ID_1021379607" MODIFIED="1510123558794">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      where do things like &quot;var a : Type, c : Num a. vAdd a Z c (Nil a) (Nil a) = Nil a&quot; get stored?
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510123560539" ID="ID_1084924064" MODIFIED="1510123580182" TEXT="There is no name here, it is an equivalence between two terms, each which are not named explicitly">
+<node CREATED="1510123589098" ID="ID_1066263585" MODIFIED="1510123611038" TEXT="ie. vAdd has a bunch of equivalences associated to it"/>
+</node>
+<node CREATED="1510123783011" ID="ID_1072099833" MODIFIED="1510123838662" TEXT="Is it this? (from IState)&#xa;&#xa;  -- | list of lhs/rhs, and a list of missing clauses. These are not&#xa;  -- exported.&#xa;  , idris_patdefs       :: Ctxt ([([(Name, Term)], Term, Term)], [PTerm])&#xa;"/>
+</node>
+</node>
+<node CREATED="1510128009303" ID="ID_1367286363" MODIFIED="1510128096975" TEXT="ideas">
+<node CREATED="1510128096967" ID="ID_1849584001" MODIFIED="1510128100378" TEXT="reuse IState">
+<node CREATED="1510128012775" ID="ID_610834353" MODIFIED="1510128036723" TEXT="we can create an IState sanity checker">
+<node CREATED="1510128038703" ID="ID_412947879" MODIFIED="1510128052394" TEXT="Typechecker">
+<node CREATED="1510128053262" ID="ID_1385485415" MODIFIED="1510128063058" TEXT="Type checks all terms and lhs/rhs pat defs"/>
+</node>
+<node CREATED="1510128075358" ID="ID_420255630" MODIFIED="1510128077466" TEXT="Evaluator">
+<node CREATED="1510128078263" ID="ID_933252181" MODIFIED="1510128086114" TEXT="has own independent evaluator"/>
+</node>
+</node>
+<node CREATED="1510128103015" ID="ID_338574098" MODIFIED="1510128123698" TEXT="we can either convert IState into another data structure, or leave as be.">
+<node CREATED="1510128124510" ID="ID_630545940" MODIFIED="1510128144394" TEXT="Probably conversion is best, because it prevents accidental use of an unsanity checked IState"/>
+</node>
+<node CREATED="1510128146662" ID="ID_850729962" MODIFIED="1510128150658" TEXT="problems">
+<node CREATED="1510128151334" ID="ID_572139484" MODIFIED="1510128179954" TEXT="One problem is that in order to use Idris to write blocks, we need an IState for the entire blockchain">
+<node CREATED="1510128181583" ID="ID_1919787007" MODIFIED="1510128185786" TEXT="This seems like too much memory"/>
+<node CREATED="1510132571399" ID="ID_1687913173" MODIFIED="1510132586427" TEXT="We could modify IState to handle this offloading, however, without too much trouble">
+<node CREATED="1510132589775" ID="ID_1720864862" MODIFIED="1510132610003" TEXT="The data is mostly only maps, and can be converted into a database, I am confident of that"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510128196790" ID="ID_731581095" MODIFIED="1510128204866" TEXT="rip out IState and replace it">
+<node CREATED="1510128225878" ID="ID_111475051" MODIFIED="1510128268506" TEXT="This allows us to intelligently store away some terms or lhs/rhs pat defs that are not in current use to disk"/>
+<node CREATED="1510128274439" ID="ID_550284302" MODIFIED="1510128316234" TEXT="We would most likely need to write core using this new version of IState"/>
+</node>
+</node>
+</node>
+<node CREATED="1510271351994" ID="ID_2532766" MODIFIED="1510271355390" TEXT="11/10">
+<node CREATED="1510271372306" ID="ID_249457453" MODIFIED="1510271400245" TEXT="I&apos;m thinking the design of Idris is that TT is supposed to be allowing type checked, and Raw is not">
+<node CREATED="1510271406130" ID="ID_270997559" MODIFIED="1510271420254" TEXT="However this doesn&apos;t make sense because TT doesn&apos;t have a type within it"/>
+<node CREATED="1510271431986" ID="ID_798177121" MODIFIED="1510271441646" TEXT="Also the context would change whether TT is actually valid or not"/>
+</node>
+<node CREATED="1510271799025" ID="ID_1936563543" MODIFIED="1510271805845" TEXT="What is the difference between TT and Raw?">
+<node CREATED="1510271807113" ID="ID_1306215296" MODIFIED="1510271816085" TEXT="TT">
+<node CREATED="1510271817209" ID="ID_648871774" MODIFIED="1510271822377">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data TT n = P NameType n (TT n) -- ^ named references with type
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- (P for &quot;Parameter&quot;, motivated by McKinna and Pollack's
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- Pure Type Systems Formalized)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| V !Int -- ^ a resolved de Bruijn-indexed variable
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Bind n !(Binder (TT n)) (TT n) -- ^ a binding
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| App (AppStatus n) !(TT n) (TT n) -- ^ function, function type, arg
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Constant Const -- ^ constant
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Proj (TT n) !Int -- ^ argument projection; runtime only
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- (-1) is a special case for 'subtract one from BI'
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Erased -- ^ an erased term
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Impossible -- ^ special case for totality checking
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Inferred (TT n) -- ^ For building case trees when coverage checkimg only.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- Marks a term as being inferred by the machine, rather than
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- given by the programmer
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| TType UExp -- ^ the type of types at some level
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| UType Universe -- ^ Uniqueness type universe (disjoint from TType)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510271825137" ID="ID_534875069" MODIFIED="1510271826005" TEXT="Raw">
+<node CREATED="1510271844633" ID="ID_733870301" MODIFIED="1510271848367">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data Raw = Var Name
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| RBind Name (Binder Raw) Raw
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| RApp Raw Raw
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| RType
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| RUType Universe
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| RConstant Const
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510384410933" ID="ID_1348603369" MODIFIED="1510387398548" TEXT="11/11">
+<node CREATED="1510384416101" ID="ID_1440578755" MODIFIED="1510384421937" TEXT="just noticed there is a :reload command">
+<node CREATED="1510384422795" ID="ID_1300258836" MODIFIED="1510384436088" TEXT="This may help find out how to unload definitions in Idris"/>
+</node>
+<node CREATED="1510385862773" ID="ID_16582562" MODIFIED="1510385960444">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      auto : Elab ()
+    </p>
+    <p>
+      auto = exact `(() : ())
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      goal : ()
+    </p>
+    <p>
+      goal = %runElab auto
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1510385899869" ID="ID_833533326" MODIFIED="1510385907545" TEXT="A hole is established at &quot;goal =&quot;"/>
+<node CREATED="1510385908053" ID="ID_346378178" MODIFIED="1510385934345" TEXT="%runElab gets the info that the type of the hole is () (the unit type)"/>
+<node CREATED="1510385937301" ID="ID_1857741402" MODIFIED="1510385948689" TEXT="Then it runs the script, which just is &quot;exact&quot; "/>
+<node CREATED="1510385949053" ID="ID_1893127875" MODIFIED="1510385959433" TEXT="exact fills the hole with an instance of the type">
+<node CREATED="1510385963765" ID="ID_1436376133" MODIFIED="1510385968985" TEXT="() is an instance of the type ()"/>
+</node>
+</node>
+<node CREATED="1510386001348" ID="ID_728036307" MODIFIED="1510386011985" TEXT="The hole type is called the goal type">
+<node CREATED="1510386015893" ID="ID_1109930229" MODIFIED="1510386027993" TEXT="g &lt;- goalType gets the goal type"/>
+</node>
+<node CREATED="1510387398509" FOLDED="true" ID="ID_1731762710" MODIFIED="1510392789420" TEXT="from https://www.youtube.com/watch?v=pqFgYCdiYz4">
+<node CREATED="1510386075869" ID="ID_255140182" MODIFIED="1510386430485">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">auto : Elab () </font>
+    </p>
+    <p>
+      <font face="Courier New">auto = do g &lt;- goalType </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;case g of </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;`(() : Type) =&gt; </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;exact `(() : ()) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;`((~A, ~B) : Type) =&gt; </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;do a &lt;- mkHole &quot;A&quot; A </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;b &lt;- mkHole &quot;B&quot; B </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;exact `(MkPair {A=~A} {B=~B} </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;~(Var a) ~(Var b)) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;focus a; auto </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;focus b; auto </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">goal : ((), ((), ())) </font>
+    </p>
+    <p>
+      <font face="Courier New">goal = %runElab auto </font>
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510386273542" ID="ID_1227908585" MODIFIED="1510386298161" TEXT="auto creates an instance for any sort of tuple that contains unit types"/>
+<node CREATED="1510386419845" ID="ID_589171680" MODIFIED="1510387212481" TEXT="my version of mkHole">
+<node CREATED="1510386779437" ID="ID_835312084" MODIFIED="1510386811689" TEXT="given a Raw (which is the type) and a name creates a named hole, it seems"/>
+<node CREATED="1510387213117" ID="ID_912494429" MODIFIED="1510387241017">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">mkHole : String -&gt; Raw -&gt; Elab TTName </font>
+    </p>
+    <p>
+      <font face="Courier New">mkHole n ty = </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;do s &lt;- gensym n </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;claim s ty </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;pure s </font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1510387298389" ID="ID_1846420583" MODIFIED="1510387393763">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">partial </font>
+    </p>
+    <p>
+      <font face="Courier New">auto' : Elab () </font>
+    </p>
+    <p>
+      <font face="Courier New">auto' = do compute </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;attack </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;try intros </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;hs &lt;- map fst &lt;$&gt; getEnv </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for_ hs $ </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;\ih =&gt; try (rewriteWith (Var ih)) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;hypothesis &lt;|&gt; search' 100 [] </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;solve </font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510388014893" ID="ID_649527408" MODIFIED="1510388085483">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">data Lang : Nat -&gt; Type where </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;V : Fin n -&gt; Lang n </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;Ap : Lang n -&gt; Lang n -&gt; Lang n </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;Lam : Lang (S n) -&gt; Lang n </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;CstI : Integer -&gt; Lang n </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;Idris : Raw -&gt; Lang n </font>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1510388089733" ID="ID_90588869" MODIFIED="1510388098585" TEXT="simple language that extends idris, I guess??">
+<node CREATED="1510388100156" ID="ID_328834023" MODIFIED="1510388106977" TEXT="Because Raw -&gt; Lang n"/>
+</node>
+</node>
+<node CREATED="1510388014893" ID="ID_1724492329" MODIFIED="1510388896327">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">elabLang : Vect n TTName -&gt; Lang n -&gt; Elab () </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">elabLang ctxt (V i) = exact (Var (index i ctxt)) </font>
+    </p>
+    <p>
+      <font face="Courier New">elabLang ctxt (Lam x) = </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;do n &lt;- gensym &quot;argument&quot; </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;attack </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;intro n </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;elabLang (n::ctxt) x </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;solve </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">elabLang ctxt (CstI x) = </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;exact (quote x) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">elabLang ctxt (Ap x y) = </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;do t1 &lt;- mkHole &quot;t1&quot; `(Type) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;t2 &lt;- mkHole &quot;t2&quot; `(Type) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fun &lt;- mkHole &quot;fun&quot; `(~(Var t1) -&gt; ~(Var t2)) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;arg &lt;- mkHole &quot;arg&quot; (Var t1) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;exact (RApp (Var fun) (Var argg)) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;focus fun; elabLang ctxt x </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;focus arg; elabLang ctxt y </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">elabLang ctxt (Idris tm) = </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;exact tm </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">exampleFun : Lang 0 </font>
+    </p>
+    <p>
+      <font face="Courier New">exampleFun = </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;Lam $ Lam $ </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;Ap (Ap (Idris `(prim__addBigInt)) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 0)) </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 1) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier New">compiled : Integer -&gt; Integer -&gt; Integer </font>
+    </p>
+    <p>
+      <font face="Courier New">compiled = %runElab (elabLang [] exampleFun) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1510387736461" ID="ID_576583452" MODIFIED="1510387786669">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      getEnv : Elab (List (TTName, Binder TT))
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1510387791925" ID="ID_8449699" MODIFIED="1510387823121" TEXT="I think we can use getEnv to investigate the Prove false problem, by printing out the definition of the functions in TT"/>
+</node>
+</node>
+</node>
+<node CREATED="1510188214615" ID="ID_631629987" MODIFIED="1510384406124" POSITION="right" TEXT="idris-elab-reflection">
+<node CREATED="1510188224639" ID="ID_200114499" MODIFIED="1510188231795" TEXT="what is the &quot;claim&quot; tactic?">
+<node CREATED="1510188232640" ID="ID_600242239" MODIFIED="1510188242939" TEXT="From doc: claim, which wraps the focused subterm with a new hole binding for a given name and type;"/>
+</node>
+<node CREATED="1510193642241" ID="ID_883800863" MODIFIED="1510193656196" TEXT="Doc mentions that reflection also contains terms for high level idris">
+<node CREATED="1510193659558" ID="ID_1688347594" MODIFIED="1510193684637" TEXT="From doc: While the majority of the data types involved in elaborator reflection are used to represent details about the core Idris language, a few of them mention features of high-level Idris."/>
+<node CREATED="1510193686502" ID="ID_1269123279" MODIFIED="1510193711909" TEXT="This seems to say that the doc agrees with my asssetion that TT by itself is unable to represent idris ">
+<node CREATED="1510193712651" ID="ID_1544492677" MODIFIED="1510193723042" TEXT="I bleieve it can&apos;t represent names, and lhs/rhs pairs"/>
+</node>
+</node>
+<node CREATED="1510196143240" ID="ID_940086824" MODIFIED="1510196145014" TEXT="Doc:">
+<node CREATED="1510196148171" ID="ID_71355578" MODIFIED="1510196152958" TEXT="This is to allow the same elaboration code to be used in both expression and definition contexts, as well as to allow elaboration scripts to produce expressions that depend on auxiliary definitions or data types. In this section, we describe the most important primitives in detail. A comprehensive description is available in the first author&#x2019;s Ph.D. thesis (Christiansen 2016).">
+<node CREATED="1510196159241" ID="ID_127579627" MODIFIED="1510196170501" TEXT="Maybe we should read this doc if available????"/>
+</node>
+</node>
+<node CREATED="1510204992583" ID="ID_722892955" MODIFIED="1510204993666" TEXT="tactics">
+<node CREATED="1510204987327" ID="ID_282079314" MODIFIED="1510204991875" TEXT="apply">
+<node CREATED="1510196941066" ID="ID_13039628" MODIFIED="1510204998930" TEXT="doc:">
+<node CREATED="1510196971728" ID="ID_546496774" MODIFIED="1510196990453" TEXT="Apply the operator op, establishing holes for its arguments based on argSpec, a list of Booleans whose length is equal to the number of arguments that the operator will be applied to. A hole is established for each argument, with the type determined by the type of the operator, with the appropriate references to earlier holes in cases where the operator has a dependent type."/>
+<node CREATED="1510196990921" ID="ID_770392702" MODIFIED="1510197022533" TEXT="This means that a type for a Raw term must always be determinable">
+<node CREATED="1510197027313" ID="ID_1602719832" MODIFIED="1510197040692" TEXT="This runs somewhat counter to the notion that Idris can determine types"/>
+<node CREATED="1510197224784" ID="ID_1967577283" MODIFIED="1510197354296" TEXT="according to the code">
+<node CREATED="1510197354289" ID="ID_675226111" MODIFIED="1510197365464" TEXT="ApplyTactic">
+<node CREATED="1510197368888" ID="ID_416101223" MODIFIED="1510197376076" TEXT="arg is tm which is a PTerm type"/>
+<node CREATED="1510197365457" ID="ID_798390217" MODIFIED="1510197367861" TEXT="body contains">
+<node CREATED="1510197230641" ID="ID_1585268716" MODIFIED="1510197235540" TEXT="elab ist toplevel ERHS [] (sMN 0 &quot;tac&quot;) tm"/>
+<node CREATED="1510197236177" ID="ID_1634490737" MODIFIED="1510197352532" TEXT="the above does something with a PTerm to"/>
+</node>
+</node>
+</node>
+<node CREATED="1510197390504" ID="ID_620402842" MODIFIED="1510197395452" TEXT="however, reflection shows">
+<node CREATED="1510197395856" ID="ID_267268138" MODIFIED="1510197397340" TEXT="apply : (op : Raw) -&gt; (argSpec : List Bool) -&gt; Elab (List TTName)"/>
+</node>
+<node CREATED="1510197654775" ID="ID_949115083" MODIFIED="1510197659795" TEXT="it&apos;s a different apply tactic">
+<node CREATED="1510197662007" ID="ID_828895854" MODIFIED="1510197777363" TEXT="apply"/>
+<node CREATED="1510197778360" ID="ID_17620716" MODIFIED="1510197781627" TEXT="It calls">
+<node CREATED="1510197782616" ID="ID_97932932" MODIFIED="1510197785439">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- | Typecheck locally
+    </p>
+    <p>
+      get_type :: Raw -&gt; Elab' aux Type
+    </p>
+    <p>
+      get_type tm = do ctxt &lt;- get_context
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;env &lt;- get_env
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(val, ty) &lt;- lift $ check ctxt env tm
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return $! (finalise ty)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510197788687" ID="ID_701936322" MODIFIED="1510197794428" TEXT="to get the type"/>
+<node CREATED="1510197831638" ID="ID_1334769098" MODIFIED="1510197838332" TEXT="This calls &apos;check&apos; from Typecheck">
+<node CREATED="1510197861952" ID="ID_1300885906" MODIFIED="1510197867062">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- | Typecheck locally
+    </p>
+    <p>
+      get_type :: Raw -&gt; Elab' aux Type
+    </p>
+    <p>
+      get_type tm = do ctxt &lt;- get_context
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;env &lt;- get_env
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(val, ty) &lt;- lift $ check ctxt env tm
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return $! (finalise ty)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510204999462" ID="ID_734616363" MODIFIED="1510205104975" TEXT="doc:">
+<node CREATED="1510205002926" ID="ID_1303534182" MODIFIED="1510205005642" TEXT="If the corresponding Boolean is False, the hole is not eligible to be solved by unification, while if the corresponding Boolean is True, the hole is marked as suitable to be solved automatically. For example, elaborating an application of a function f that takes one implicit argument and two explicit arguments might invoke apply `(f) [False, True, True]. The names of the established holes are returned."/>
+<node CREATED="1510205009574" ID="ID_1177553296" MODIFIED="1510205042970" TEXT="Why does this seem backwards? It would seem to me that implicit arguments would be eligible and explicit arguments would not be"/>
+<node CREATED="1510205104967" ID="ID_315829230" MODIFIED="1510205108210" TEXT="Their example:">
+<node CREATED="1510205093398" ID="ID_1320976083" MODIFIED="1510205102208">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      do [x, y] &lt;- apply `(plus) [False, False]
+    </p>
+    <p>
+      &#160;&#160;&#160;solve
+    </p>
+    <p>
+      &#160;&#160;&#160;focus x; fill `(Z); solve
+    </p>
+    <p>
+      &#160;&#160;&#160;focus y; fill `(S Z); solve
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510205110422" ID="ID_1900701253" MODIFIED="1510205138338" TEXT="It looks like I&apos;m right, because plus&apos;s arguments are explicit"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510221625920" ID="ID_1198604410" MODIFIED="1510221800967" TEXT="Figure 5">
+<node CREATED="1510221629864" ID="ID_1731787003" MODIFIED="1510221859049">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier New">-- Initial state&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;?h : &#8704;t : Type. Type . h </font>
+    </p>
+    <p>
+      <font face="Courier New">do&#160;&#160;&#160;&#160;&#160;&#160;attack &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;?h &#8776; (?h0 : &#8704;t : Type. Type . h0 ):&#8704;t : Type. Type. h </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;intro `{{t}} &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;?h &#8776; (&#955;t : Type. ?h0 : Type . h0 ):&#8704;t : Type. Type. h </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;arg &lt;- gensym &quot;arg&quot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;No change in proof term </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;forall arg (Var `{{t}})&#160;&#160;&#160;&#160;?h &#8776; (&#955;t : Type. &#8704;arg : t. ?h0 : Type . h0 ):&#8704;t : Type. Type. h </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;fill `(Nat) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;?h &#8776; (&#955;t : Type. &#8704;arg : t. ?h0 &#8776; Nat:Type. h0 ):&#8704;t : Type. Type. h </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;solve {- the fill -} &#160;&#160;&#160;&#160;&#160;&#160;?h &#8776; (&#955;t : Type. &#8704;arg : t. Nat):&#8704;t : Type. Type. h </font>
+    </p>
+    <p>
+      <font face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;solve {- the attack -} &#160;&#160;&#160;&#160;&#955;t : Type. &#8704;arg : t. Nat </font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510221720908" ID="ID_532146480" MODIFIED="1510221755589" TEXT="Initial state is a hole, h which should have a type of (Type -&gt; Type)">
+<node CREATED="1510221758658" ID="ID_1202295751" MODIFIED="1510221768365" TEXT="The hole is in an equation that returns h"/>
+</node>
+<node CREATED="1510221800961" ID="ID_1637581211" MODIFIED="1510221802949" TEXT="attack">
+<node CREATED="1510221769329" ID="ID_1578809119" MODIFIED="1510221799029" TEXT="I don&apos;t believe the attack step is necessary here, because we are already in the right format for intro"/>
+<node CREATED="1510221807034" ID="ID_1160413679" MODIFIED="1510221830630" TEXT="This places a &quot;guess&quot; inside the ?h hole, called h0"/>
+<node CREATED="1510221964844" ID="ID_97511376" MODIFIED="1510221987902" TEXT="The h0 guess is just another hole with the same type as ?h"/>
+<node CREATED="1510221992675" ID="ID_1076748498" MODIFIED="1510222005223" TEXT="Since the guess is the same type, it can serve as a guess for the hole"/>
+</node>
+<node CREATED="1510222040599" ID="ID_249708990" MODIFIED="1510222046903" TEXT="intro `{{t}}">
+<node CREATED="1510222048243" ID="ID_747122164" MODIFIED="1510222058950" TEXT="`{{t}} means t">
+<node CREATED="1510222162340" ID="ID_723125695" MODIFIED="1510222165456" TEXT="doc:">
+<node CREATED="1510222166516" ID="ID_1299330572" MODIFIED="1510222167584" TEXT="The syntax `{{n}} is an unresolved quotation of the name n &#x2014; that is, it is a quotation of the name n precisely as written. The similar syntax `{n} is a resolved quotation, where the name n is treated as a reference to a unique name in scope, and expanded with namespace qualifiers prior to reification as a TTName. If n cannot be uniquely resolved, then `{n} will result in an error. Typically, unresolved names should be used for new things being defined by a metapro- gram, while resolved names should be used for existing definitions that the metaprogram will consult."/>
+</node>
+<node CREATED="1510222170748" ID="ID_645370862" MODIFIED="1510222180423" TEXT="Not sure if I understand this exactly?????">
+<node CREATED="1510222695686" ID="ID_450616077" MODIFIED="1510222720538" TEXT="What happens if t is already part of the expresion, does it get captured?">
+<node CREATED="1510222787599" ID="ID_1581224946" MODIFIED="1510222791427" TEXT="Maybe this is what gensym is for"/>
+</node>
+</node>
+</node>
+<node CREATED="1510222742796" ID="ID_1512260410" MODIFIED="1510222758938" TEXT="Converts ?h0 into a lambda, and ?h0 into t2 (from t1-&gt;t2)"/>
+</node>
+<node CREATED="1510222805189" ID="ID_1605380927" MODIFIED="1510222812339" TEXT="arg &lt;- gensym &quot;arg&quot;">
+<node CREATED="1510222813367" ID="ID_307478515" MODIFIED="1510222825907" TEXT="creates a fresh name that can&apos;t be captured by something else"/>
+</node>
+<node CREATED="1510222856032" ID="ID_1072585878" MODIFIED="1510222864068" TEXT="forall arg (Var `{{t}})">
+<node CREATED="1510222865191" ID="ID_275498412" MODIFIED="1510222923092" TEXT="Simply creates a new variable around the ?h0 hole"/>
+<node CREATED="1510222930848" ID="ID_668986591" MODIFIED="1510222946844" TEXT="Does this mean that the guess no longer has the same type as the hole for &quot;h&quot;?">
+<node CREATED="1510222948456" ID="ID_1498382156" MODIFIED="1510222971104" TEXT="Does forall arg change the type? It seems as if it would"/>
+<node CREATED="1510224254600" ID="ID_1752866393" MODIFIED="1510224276868" TEXT="No it still has the same type, because (forall arg.Type) is also a Type"/>
+</node>
+</node>
+<node CREATED="1510222985408" ID="ID_860165582" MODIFIED="1510223000244" TEXT="fill `(Nat)">
+<node CREATED="1510223001344" ID="ID_1423104289" MODIFIED="1510223007820" TEXT="Fills ?h0 with value Nat"/>
+<node CREATED="1510223008416" ID="ID_326404963" MODIFIED="1510223014172" TEXT="Now ?h0 has a guess"/>
+</node>
+<node CREATED="1510223017216" ID="ID_1827701402" MODIFIED="1510223020380" TEXT="solve">
+<node CREATED="1510223021480" ID="ID_1450328673" MODIFIED="1510223035276" TEXT="substitutes the guess for all instances of ?h0">
+<node CREATED="1510223055784" ID="ID_493444100" MODIFIED="1510223059788" TEXT="In this case there is only one"/>
+</node>
+</node>
+<node CREATED="1510223061601" ID="ID_1181835843" MODIFIED="1510223062588" TEXT="solve"/>
+</node>
+<node CREATED="1510272266320" ID="ID_1851400434" MODIFIED="1510272268644" TEXT="definitions">
+<node CREATED="1510272269488" ID="ID_1937206289" MODIFIED="1510272270764" TEXT="doc:">
+<node CREATED="1510272271600" ID="ID_372636363" MODIFIED="1510272286096">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Elaboration scripts can extend the global context with new
+    </p>
+    <p>
+      declarations and definitions. Rather than a single-step process to
+    </p>
+    <p>
+      define a function or data type, a two-step process is employed where
+    </p>
+    <p>
+      the type of a function or type constructor is first declared, followed
+    </p>
+    <p>
+      by another operation to define either its pattern-matching equations
+    </p>
+    <p>
+      or constructors.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510272309816" ID="ID_516319192" MODIFIED="1510272312384">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Under this scheme, the newly defined elements can
+    </p>
+    <p>
+      be required to pass the type checker, but it is still possible to define
+    </p>
+    <p>
+      functions and data types that refer to one another.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510272325607" ID="ID_1039129323" MODIFIED="1510272348692" TEXT="This means that defined elements always must pass the type checker, I think"/>
+</node>
+</node>
+<node CREATED="1510363700839" ID="ID_1787472926" MODIFIED="1510363731749" TEXT="functions are defined with a name, along with lhs/rhs pairs as Raw ">
+<node CREATED="1510364400624" ID="ID_1635670135" MODIFIED="1510364402517" TEXT="It goes">
+<node CREATED="1510364403248" ID="ID_1812717812" MODIFIED="1510364407219" TEXT="declareType">
+<node CREATED="1510364419663" ID="ID_146186839" MODIFIED="1510364425395" TEXT="specifies type of function"/>
+</node>
+<node CREATED="1510364409455" ID="ID_1840179373" MODIFIED="1510364418091" TEXT="defineFunction">
+<node CREATED="1510364426937" ID="ID_1868439469" MODIFIED="1510364430923" TEXT="creates lhs/rhs pairs"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510364501776" ID="ID_1700511711" MODIFIED="1510364504772" TEXT="two types of holes">
+<node CREATED="1510364505696" ID="ID_134087814" MODIFIED="1510364508275" TEXT="doc:">
+<node CREATED="1510364508791" ID="ID_862394394" MODIFIED="1510364532738">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Solve the current hole as if it were a top-level Idris named
+    </p>
+    <p>
+      hole. Not to be confused with the holes in TT dev , which are an
+    </p>
+    <p>
+      implementation technique for elaborators, Idris&#8217;s holes represent
+    </p>
+    <p>
+      unfinished user programs. These holes can later be solved using
+    </p>
+    <p>
+      all of Idris&#8217;s standard interactive features. This tactic allows
+    </p>
+    <p>
+      metaprograms to delegate to human intelligence when necessary.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1510377339261" ID="ID_1724807721" MODIFIED="1510377341032" TEXT="doc:">
+<node CREATED="1510377342469" ID="ID_1830000864" MODIFIED="1510377374503">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Some expressions, such as case expressions, require additional top-level definitions to be produced after elaboration, but these helper definitions are not accessible to other parts of the program, which means that users can be blissfully unaware of this elaboration order.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1510377378141" ID="ID_385555538" MODIFIED="1510377380970" TEXT="What is this?">
+<node CREATED="1510377383229" ID="ID_1837336956" MODIFIED="1510377393000" TEXT="What top-level definitions?">
+<node CREATED="1510377402908" ID="ID_337642411" MODIFIED="1510377421071" TEXT="Are they talking about the lhs/rhs pairs of the cases of the case statement?"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1480463573465" ID="ID_697925613" MODIFIED="1510224241378" POSITION="right" TEXT="wiki">
 <node CREATED="1480510613617" ID="ID_1303643363" MODIFIED="1510031515830" TEXT="backups">
 <node CREATED="1480510626508" ID="ID_580202796" MODIFIED="1480510627789" TEXT="old">
 <node CREATED="1480463578713" ID="ID_1529077249" MODIFIED="1480463580296" TEXT="backups">
@@ -3332,7 +4141,7 @@
 </node>
 <node CREATED="1480510658102" ID="ID_881161739" MODIFIED="1480510658102" TEXT=""/>
 </node>
-<node CREATED="1488097395576" FOLDED="true" ID="ID_125458100" MODIFIED="1497250331163" POSITION="right" TEXT="irc">
+<node CREATED="1488097395576" FOLDED="true" ID="ID_125458100" MODIFIED="1510036181645" POSITION="right" TEXT="irc">
 <node CREATED="1488097397447" ID="ID_1962010074" MODIFIED="1488097406997" TEXT="closed phase">
 <node CREATED="1488097408455" ID="ID_770734358" MODIFIED="1488097411956" TEXT="type system"/>
 <node CREATED="1488097412208" ID="ID_1472381158" MODIFIED="1488097416827" TEXT="chain rules"/>
@@ -3881,7 +4690,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1507201214087" FOLDED="true" ID="ID_169974140" MODIFIED="1510032823753" POSITION="right" TEXT="Idris implementation">
+<node CREATED="1507201214087" ID="ID_169974140" MODIFIED="1510185001767" POSITION="right" TEXT="Idris implementation">
 <node CREATED="1508831169430" ID="ID_1910893993" MODIFIED="1508831172626" TEXT="definitions">
 <node CREATED="1508831173478" ID="ID_1370813647" MODIFIED="1508831174746" TEXT="HOAS">
 <node CREATED="1508831175494" ID="ID_885601585" MODIFIED="1508831181297" TEXT="Higher Order Abstract Syntax"/>
@@ -4466,7 +5275,7 @@
 </node>
 </node>
 <node CREATED="1509003063599" ID="ID_1967083793" MODIFIED="1509003135364" TEXT="Binder">
-<node CREATED="1509003135312" FOLDED="true" ID="ID_495815218" MODIFIED="1509003405464" TEXT="src">
+<node CREATED="1509003135312" FOLDED="true" ID="ID_495815218" MODIFIED="1510034784991" TEXT="src">
 <node CREATED="1509003067382" ID="ID_133199907" MODIFIED="1509003070898">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -4785,6 +5594,305 @@
 <node CREATED="1509022271665" ID="ID_283247398" MODIFIED="1509022278397" TEXT="There is some sort of dynamic linker"/>
 <node CREATED="1509022287097" ID="ID_1403848605" MODIFIED="1509022293884" TEXT="It can also be interpreted">
 <node CREATED="1509022294721" ID="ID_1498797643" MODIFIED="1509022295733" TEXT=":x"/>
+</node>
+</node>
+<node CREATED="1510100653067" ID="ID_1969179850" MODIFIED="1510112506527" TEXT="Elaboration">
+<node CREATED="1510100658835" ID="ID_1218563990" MODIFIED="1510100672167" TEXT="There are two Elabs, it seems">
+<node CREATED="1510100673171" ID="ID_619360531" MODIFIED="1510100680214" TEXT="Idris/ElabDecls">
+<node CREATED="1510100749403" ID="ID_946219026" MODIFIED="1510100755935" TEXT="also including Idris/Elab/...">
+<node CREATED="1510100772122" ID="ID_986139556" MODIFIED="1510100776849">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -rw-r--r-- 1 tim tim&#160;&#160;&#160;2899 Oct 13 17:14 AsPat.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;60210 Oct 13 17:14 Clause.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;27316 Oct 13 17:14 Data.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;20695 Oct 13 17:14 Implementation.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;20642 Oct 13 17:14 Interface.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;&#160;3982 Oct 13 17:14 Provider.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;&#160;8127 Oct 13 17:14 Quasiquote.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;21041 Oct 13 17:14 Record.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;10983 Oct 13 17:14 Rewrite.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;&#160;1952 Oct 13 17:14 RunElab.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim 129970 Oct 13 17:14 Term.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;&#160;4500 Oct 13 17:14 Transform.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;10487 Oct 13 17:14 Type.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;34946 Nov&#160;&#160;6 14:42 Utils.hs
+    </p>
+    <p>
+      &#160;&#160;-rw-r--r-- 1 tim tim&#160;&#160;&#160;4759 Oct 13 17:14 Value.hs
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1510100680595" ID="ID_769482931" MODIFIED="1510100696509" TEXT="Idris/Core/Elaborator"/>
+</node>
+<node CREATED="1510100697474" ID="ID_1484539821" MODIFIED="1510100715767" TEXT="There is also ProofState which seems to be controlled by Elab">
+<node CREATED="1510100716667" ID="ID_526189928" MODIFIED="1510100739191" TEXT="In particular, ProofState contains solve which the outside Elab calls"/>
+</node>
+<node CREATED="1510112496146" ID="ID_712500418" MODIFIED="1510112512813" TEXT="Elab">
+<node CREATED="1510112512807" ID="ID_125516531" MODIFIED="1510112513739" TEXT="Data">
+<node CREATED="1510101579801" ID="ID_855966095" MODIFIED="1510101581453" TEXT="elabData">
+<node CREATED="1510101582393" ID="ID_1434140580" MODIFIED="1510112187947" TEXT="checks if opts contain codata">
+<node CREATED="1510112188856" ID="ID_1015773210" MODIFIED="1510112200372" TEXT="If so, should add Inf to parameters, I guess???"/>
+</node>
+<node CREATED="1510112317312" ID="ID_1466493087" MODIFIED="1510112323412" TEXT="checks if name is undefined"/>
+<node CREATED="1510112344808" ID="ID_1291631582" MODIFIED="1510112389907" TEXT="checks if name starts with an underscore or starts with lowercase letter">
+<node CREATED="1510112390839" ID="ID_1815446764" MODIFIED="1510112460307" TEXT="If so, prints warning"/>
+</node>
+<node CREATED="1510112480927" ID="ID_1809083010" MODIFIED="1510112483643" TEXT="calls buildType"/>
+</node>
+</node>
+<node CREATED="1510112514223" ID="ID_1967830912" MODIFIED="1510112517643" TEXT="Type">
+<node CREATED="1510112521127" ID="ID_1832567800" MODIFIED="1510112522635" TEXT="buildType">
+<node CREATED="1510112577926" ID="ID_1837229004" MODIFIED="1510112585419" TEXT="calls addUsingConstraints">
+<node CREATED="1510113262725" ID="ID_501319919" MODIFIED="1510113265610" TEXT="????"/>
+</node>
+<node CREATED="1510113266414" ID="ID_1627462123" MODIFIED="1510113271162" TEXT="calls addUsingImpls">
+<node CREATED="1510113272198" ID="ID_1873118666" MODIFIED="1510113693921" TEXT="???"/>
+</node>
+<node CREATED="1510113359470" ID="ID_1118991789" MODIFIED="1510113362098" TEXT="calls addImpl">
+<node CREATED="1510113363014" ID="ID_564750046" MODIFIED="1510113378393">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- | Add the implicit arguments to applications in the term [Name]
+    </p>
+    <p>
+      -- gives the names to always expend, even when under a binder of that
+    </p>
+    <p>
+      -- name (this is to expand methods with implicit arguments in
+    </p>
+    <p>
+      -- dependent interfaces).
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510113729125" ID="ID_372039903" MODIFIED="1510113738905" TEXT="calls elaborate">
+<node CREATED="1510113739773" ID="ID_827520127" MODIFIED="1510113759337" TEXT="This is from Elaborator in Core(the other elaborator)">
+<node CREATED="1510113816301" ID="ID_1511726639" MODIFIED="1510113818097" TEXT="script is">
+<node CREATED="1510113819061" ID="ID_1760604499" MODIFIED="1510113821929" TEXT="(build i info ETyDecl [] n ty)"/>
+</node>
+</node>
+<node CREATED="1510116269798" ID="ID_1098328675" MODIFIED="1510116320080" TEXT="calls build to generate ElabD script"/>
+</node>
+<node CREATED="1510116972101" ID="ID_1867381122" MODIFIED="1510116972897" TEXT="..."/>
+</node>
+</node>
+<node CREATED="1510116451630" ID="ID_1253716529" MODIFIED="1510116452473" TEXT="Term">
+<node CREATED="1510116320070" ID="ID_144124040" MODIFIED="1510116529110" TEXT="build">
+<node CREATED="1510116529103" ID="ID_300754501" MODIFIED="1510116530442" TEXT="comments">
+<node CREATED="1510116283061" ID="ID_1912567431" MODIFIED="1510116287748">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- | Using the elaborator, convert a term in raw syntax to a fully
+    </p>
+    <p>
+      -- elaborated, typechecked term.
+    </p>
+    <p>
+      --
+    </p>
+    <p>
+      -- If building a pattern match, we convert undeclared variables from
+    </p>
+    <p>
+      -- holes to pattern bindings.
+    </p>
+    <p>
+      --
+    </p>
+    <p>
+      -- Also find deferred names in the term and their types
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510116525110" ID="ID_1844906196" MODIFIED="1510116534585" TEXT="calls elab"/>
+<node CREATED="1510116974597" ID="ID_129631558" MODIFIED="1510116975481" TEXT="..."/>
+</node>
+<node CREATED="1510116513830" ID="ID_31336712" MODIFIED="1510116541652" TEXT="elab">
+<node CREATED="1510116541646" ID="ID_1127093405" MODIFIED="1510116544705" TEXT="comments">
+<node CREATED="1510116515510" ID="ID_149960751" MODIFIED="1510116518855">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- | Returns the set of declarations we need to add to complete the
+    </p>
+    <p>
+      -- definition (most likely case blocks to elaborate) as well as
+    </p>
+    <p>
+      -- declarations resulting from user tactic scripts (%runElab)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510116791350" ID="ID_1126446883" MODIFIED="1510116952069" TEXT="calls compute">
+<node CREATED="1510116795925" ID="ID_412787340" MODIFIED="1510116816210" TEXT="This is the same as the tactic &quot;Compute&quot;, it seems"/>
+<node CREATED="1510116952062" ID="ID_737041508" MODIFIED="1510116956817" TEXT="from doc:">
+<node CREATED="1510116943238" ID="ID_1832449067" MODIFIED="1510116946841" TEXT="Normalises all terms in the goal (note: does not normalise assumptions)"/>
+</node>
+</node>
+<node CREATED="1510116977422" ID="ID_1041725254" MODIFIED="1510117196684" TEXT="calls elabE">
+<node CREATED="1510117202597" ID="ID_1884035500" MODIFIED="1510117204585" TEXT="comments">
+<node CREATED="1510117204933" ID="ID_907992916" MODIFIED="1510117215526">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;&#160;&#160;&#160;-- | elabE elaborates an expression, possibly wrapping implicit coercions
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;-- and forces/delays.&#160;&#160;If you make a recursive call in elab', it is
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;-- normally correct to call elabE - the ones that don't are `desugarings
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;-- typically
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1510116969381" ID="ID_1130882745" MODIFIED="1510116970521" TEXT="..."/>
+</node>
+</node>
+</node>
+<node CREATED="1510113084199" ID="ID_375657374" MODIFIED="1510113087770" TEXT="AbsSyntax">
+<node CREATED="1510113088814" ID="ID_1849861380" MODIFIED="1510113089690" TEXT="addUsingConstraints "/>
+</node>
+<node CREATED="1510112241896" ID="ID_605601319" MODIFIED="1510112245163" TEXT="AbsSyntaxTree">
+<node CREATED="1510112246680" ID="ID_45984520" MODIFIED="1510112250788" TEXT="isUndefined">
+<node CREATED="1510112280672" ID="ID_1612941719" MODIFIED="1510112288268" TEXT="Finds if a name is defined in context">
+<node CREATED="1510112288728" ID="ID_1768776109" MODIFIED="1510112304980" TEXT="this is IState tt_ctxt"/>
+</node>
+</node>
+</node>
+<node CREATED="1510185009436" ID="ID_539664104" MODIFIED="1510187558445" TEXT="From doc: Elaboration is type-directed, meaning that the elaborator always knows the type of the term it is constructing.">
+<node CREATED="1510185297292" ID="ID_280382216" MODIFIED="1510185331615" TEXT="If this is true, then how does it know the type of the type, ex. foo : Int -&gt; Int ... how does it know it&apos;s trying to construct * -&gt; *?"/>
+</node>
+<node CREATED="1510187560744" ID="ID_1473998946" MODIFIED="1510187567476" TEXT="Holes and guesses">
+<node CREATED="1510187568248" ID="ID_1216501002" MODIFIED="1510187940491" TEXT="Holes are used for implied variables">
+<node CREATED="1510187942432" ID="ID_792553144" MODIFIED="1510187964508" TEXT="The idea is that the actual value for the variable needs to be computed by the prover"/>
+</node>
+<node CREATED="1510187965352" ID="ID_1759616167" MODIFIED="1510187992380" TEXT="guesses are variables where a term is given ,but not used to reduce the rest of the terms in the proof state">
+<node CREATED="1510187994056" ID="ID_917504819" MODIFIED="1510188013275" TEXT="The value of guess must be of the type of the hole it fills"/>
+</node>
+</node>
+<node CREATED="1510196778800" ID="ID_1825529105" MODIFIED="1510196780325" TEXT="tactics">
+<node CREATED="1510196781795" ID="ID_1848762603" MODIFIED="1510196785810" TEXT="claim">
+<node CREATED="1510196786571" ID="ID_1822096791" MODIFIED="1510196794668" TEXT="creates a new hole with a specified type"/>
+</node>
+<node CREATED="1510216841049" ID="ID_1433234802" MODIFIED="1510216843405" TEXT="intro">
+<node CREATED="1510216845465" ID="ID_815852798" MODIFIED="1510216909845" TEXT="Given a hole with the type of a function (may be a dependent function), converts to a lambda with a hole inside of it of the result">
+<node CREATED="1510216911289" ID="ID_414659131" MODIFIED="1510216920452" TEXT="?h:t1-&gt;t2.h">
+<node CREATED="1510216924538" ID="ID_1941181471" MODIFIED="1510216930589" TEXT="intro n">
+<node CREATED="1510216931673" ID="ID_363885390" MODIFIED="1510216958878" TEXT="\(n:t1). ?h:t2.h"/>
+</node>
+</node>
+<node CREATED="1510216961225" ID="ID_1373646118" MODIFIED="1510217069541" TEXT="?h:(forall x:t1.t2).h">
+<node CREATED="1510217070690" ID="ID_8476585" MODIFIED="1510217072117" TEXT="intro n">
+<node CREATED="1510217073578" ID="ID_1509135919" MODIFIED="1510217112902" TEXT="\(n:t1).(?h : t2[x/n]).h"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510218256375" ID="ID_1689182019" MODIFIED="1510218259371" TEXT="patbind">
+<node CREATED="1510218260511" ID="ID_1390443006" MODIFIED="1510218265323" TEXT="Not sure what this means?"/>
+<node CREATED="1510218265895" ID="ID_1369455641" MODIFIED="1510218267195" TEXT="doc:">
+<node CREATED="1510218268591" ID="ID_1310084990" MODIFIED="1510218287115" TEXT="Introduce a new pattern binding var v around the hole, similarly to intro and forall."/>
+</node>
+</node>
+<node CREATED="1510218955603" ID="ID_225222135" MODIFIED="1510218956927" TEXT="attack">
+<node CREATED="1510218958355" ID="ID_314189789" MODIFIED="1510219190697" TEXT="attack is mean to help intro be used">
+<node CREATED="1510218966435" ID="ID_157669635" MODIFIED="1510218968687" TEXT="For ex">
+<node CREATED="1510216911289" ID="ID_1775741784" MODIFIED="1510219009326" TEXT="?h:t1-&gt;t2.h. f">
+<node CREATED="1510219012582" ID="ID_1248998939" MODIFIED="1510219117800" TEXT="(in general I think a lot of expressions will be like this)"/>
+</node>
+<node CREATED="1510219120092" ID="ID_590541056" MODIFIED="1510219131544" TEXT="Intro needs the form">
+<node CREATED="1510216911289" ID="ID_111090827" MODIFIED="1510216920452" TEXT="?h:t1-&gt;t2.h"/>
+<node CREATED="1510219144276" ID="ID_64235901" MODIFIED="1510219146008" TEXT="or"/>
+<node CREATED="1510216961225" ID="ID_904753325" MODIFIED="1510217069541" TEXT="?h:(forall x:t1.t2).h"/>
+</node>
+</node>
+</node>
+<node CREATED="1510219196204" ID="ID_796624485" MODIFIED="1510219213729" TEXT="does the following">
+<node CREATED="1510216911289" ID="ID_1698754524" MODIFIED="1510219009326" TEXT="?h:t1-&gt;t2.h. f">
+<node CREATED="1510219241228" ID="ID_587703625" MODIFIED="1510219242552" TEXT="attack">
+<node CREATED="1510219243413" ID="ID_1173496839" MODIFIED="1510219275689" TEXT="(?h ~~(?h&apos;:t1-&gt;t2.h&apos;):t1-&gt;t2).f h">
+<node CREATED="1510219283757" ID="ID_152396651" MODIFIED="1510219292009" TEXT="where ~~ means a guess value"/>
+</node>
+</node>
+</node>
+<node CREATED="1510219303973" ID="ID_1078069782" MODIFIED="1510219311265" TEXT="then the focus is placed on ?h&apos;">
+<node CREATED="1510219313373" ID="ID_1683194031" MODIFIED="1510219317945" TEXT="so intro n makes it into">
+<node CREATED="1510219319485" ID="ID_1799969393" MODIFIED="1510219337385" TEXT="(?h ~~(\n.t1.(?h&apos;:t2).h&apos;):t1-&gt;t2).f h"/>
+</node>
+</node>
+<node CREATED="1510219346101" ID="ID_557600995" MODIFIED="1510219401265" TEXT="In other words, the ?h is turned into a lambda, which takes the place of ?h in the rest of the expression"/>
+</node>
+</node>
+</node>
+<node CREATED="1510220531091" ID="ID_904694696" MODIFIED="1510220536815" TEXT="elab primitivies in Idris">
+<node CREATED="1510220537875" ID="ID_127294308" MODIFIED="1510220558863" TEXT="getEnv : Elab (List (TTName, Binder TT))">
+<node CREATED="1510220549587" ID="ID_1524716213" MODIFIED="1510220570087" TEXT="doc:">
+<node CREATED="1510220571123" ID="ID_334239045" MODIFIED="1510220572207" TEXT="Look up the lexical scope at the focused hole, or fail if there are no holes."/>
+</node>
+<node CREATED="1510220574483" ID="ID_1207928626" MODIFIED="1510220609967" TEXT="looks like it lists all the variables and corresponding types, values, etc">
+<node CREATED="1510220611307" ID="ID_879506933" MODIFIED="1510220625136" TEXT="for a let there will be a value, for a hole, just a type, for a lambda just a type, etc."/>
+</node>
+</node>
 </node>
 </node>
 </node>
