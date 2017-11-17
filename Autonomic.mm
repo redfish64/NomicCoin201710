@@ -3483,8 +3483,7 @@
       goal = %runElab auto
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1510385899869" ID="ID_833533326" MODIFIED="1510385907545" TEXT="A hole is established at &quot;goal =&quot;"/>
 <node CREATED="1510385908053" ID="ID_346378178" MODIFIED="1510385934345" TEXT="%runElab gets the info that the type of the hole is () (the unit type)"/>
 <node CREATED="1510385937301" ID="ID_1857741402" MODIFIED="1510385948689" TEXT="Then it runs the script, which just is &quot;exact&quot; "/>
@@ -3642,8 +3641,7 @@
       <font face="Courier New">&#160;&#160;Idris : Raw -&gt; Lang n </font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1510388089733" ID="ID_90588869" MODIFIED="1510388098585" TEXT="simple language that extends idris, I guess??">
 <node CREATED="1510388100156" ID="ID_328834023" MODIFIED="1510388106977" TEXT="Because Raw -&gt; Lang n"/>
 </node>
@@ -3763,8 +3761,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1510387736461" ID="ID_576583452" MODIFIED="1510387786669">
@@ -3777,13 +3774,1129 @@
       getEnv : Elab (List (TTName, Binder TT))
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1510387791925" ID="ID_8449699" MODIFIED="1510387823121" TEXT="I think we can use getEnv to investigate the Prove false problem, by printing out the definition of the functions in TT"/>
 </node>
 </node>
+<node CREATED="1510477548738" ID="ID_1623795438" MODIFIED="1510477551726" TEXT="11/12">
+<node CREATED="1510477620970" ID="ID_1362817572" MODIFIED="1510477625758" TEXT=":browse Language.Reflection.Utils"/>
+<node CREATED="1510477626210" ID="ID_574781858" MODIFIED="1510477640310" TEXT=":browse Language.Reflection.Elab.Tactics"/>
+<node CREATED="1510485542376" ID="ID_307073808" MODIFIED="1510489432567" TEXT="TT explanation">
+<node CREATED="1510485560856" FOLDED="true" ID="ID_57946895" MODIFIED="1510489459354">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bar2 : Nat -&gt; Nat
+    </p>
+    <p>
+      bar2 xxx = S xxx
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510485551544" ID="ID_480228488" MODIFIED="1510485556827">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      MkFnDesc Ref
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))) (TType (UVar &quot;./Learn/Elab4.idr&quot; 198)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(DefineFun (NS (UN &quot;bar2&quot;) [&quot;Elab4&quot;, &quot;Learn&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[MkFunClause (Bind (UN &quot;xxx&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(PVar (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (P Ref
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;bar2&quot;) [&quot;Elab4&quot;, &quot;Learn&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))) (TType (UVar &quot;./Learn/Elab4.idr&quot; 198)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20)))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P Bound (UN &quot;xxx&quot;) (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;xxx&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(PVar (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (P (DCon 1 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;S&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (MN 0 &quot;_t&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 0 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) Erased) (TType (UVar &quot;./Prelude/Nat.idr&quot; 22)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 0 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) Erased)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P Bound (UN &quot;xxx&quot;) (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))))]) : FnDesc
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510488614872" ID="ID_348021814" MODIFIED="1510488620002">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (Bind (UN &quot;xxx&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(PVar (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (P Ref
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;bar2&quot;) [&quot;Elab4&quot;, &quot;Learn&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))) (TType (UVar &quot;./Elab4.idr&quot; 198)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20)))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P Bound (UN &quot;xxx&quot;) (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))))
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510488623537" ID="ID_373134042" MODIFIED="1510488798884" TEXT="Here (Bind (UN &quot;xxx&quot;)) references itself &quot;P Bound (UN &quot;xxx&quot;) ...)"/>
+<node CREATED="1510488804874" ID="ID_81996004" MODIFIED="1510489089012" TEXT="I think this is saying, there is an &quot;xxx&quot; around, and you can reference it with (P Bound (UN &quot;xxx&quot;))... within the confines of the Bind"/>
 </node>
-<node CREATED="1510188214615" ID="ID_631629987" MODIFIED="1510384406124" POSITION="right" TEXT="idris-elab-reflection">
+</node>
+</node>
+<node CREATED="1510488480896" FOLDED="true" ID="ID_281654948" MODIFIED="1510489458721">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      bar3 : Nat -&gt; Nat
+    </p>
+    <p>
+      bar3 = \x =&gt; S x
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510488474360" ID="ID_412608540" MODIFIED="1510488478148">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      MkFnDesc Ref
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))) (TType (UVar &quot;./Elab4.idr&quot; 202)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(DefineFun (NS (UN &quot;bar3&quot;) [&quot;Elab4&quot;, &quot;Learn&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[MkFunClause (P Ref
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;bar3&quot;) [&quot;Elab4&quot;, &quot;Learn&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))) (TType (UVar &quot;./Elab4.idr&quot; 202)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20)))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;x&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Lam (P (TCon 8 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) (TType (UVar &quot;./Prelude/Nat.idr&quot; 20))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (P (DCon 1 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;S&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (MN 0 &quot;_t&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (P (TCon 0 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) Erased) (TType (UVar &quot;./Prelude/Nat.idr&quot; 22)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(P (TCon 0 0) (NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;]) Erased)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 0)))]) : FnDesc
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510485583261" ID="ID_1040980910" MODIFIED="1510485704052" TEXT="Bind">
+<node CREATED="1510485705056" ID="ID_1454871219" MODIFIED="1510489497196" TEXT="binds a variable (which can be looked up in the value with (P Bound ...)"/>
+<node CREATED="1510489474409" ID="ID_1546941406" MODIFIED="1510489521700" TEXT="It seems as if it just specifies a type. In other words, the compiler must unify it to figure out what it is"/>
+<node CREATED="1510485707232" ID="ID_1396216200" MODIFIED="1510485715307" TEXT="Arg are">
+<node CREATED="1510485722576" ID="ID_1354599376" MODIFIED="1510485725764" TEXT="TTName">
+<node CREATED="1510485736232" ID="ID_1458635099" MODIFIED="1510485742724" TEXT="name of arg"/>
+<node CREATED="1510485780264" ID="ID_690193706" MODIFIED="1510485784980" TEXT="UN stands for &quot;user defined&quot;"/>
+</node>
+<node CREATED="1510485792968" ID="ID_678998415" MODIFIED="1510485802999" TEXT="Binder TT">
+<node CREATED="1510485806008" ID="ID_943457446" MODIFIED="1510485831228" TEXT="Binder used to bind arg"/>
+<node CREATED="1510485842816" ID="ID_324267804" MODIFIED="1510485844612" TEXT="TT is the type"/>
+</node>
+<node CREATED="1510487281448" ID="ID_381342741" MODIFIED="1510487300796" TEXT="TT">
+<node CREATED="1510488359304" ID="ID_1508132379" MODIFIED="1510622502217" TEXT="This is the argument where the Bind is active"/>
+</node>
+</node>
+</node>
+<node CREATED="1510549901538" ID="ID_224721084" MODIFIED="1510549902873" TEXT="P">
+<node CREATED="1510549903837" ID="ID_784081919" MODIFIED="1510549913972">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (P (TCon 8 0)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;Nat&quot;) [&quot;Nat&quot;, &quot;Prelude&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Prelude/Nat.idr&quot; 20)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510549941277" ID="ID_672563758" MODIFIED="1510549957048" TEXT="Points to reference Nat, with type &quot;Type&quot;"/>
+<node CREATED="1510549974508" ID="ID_969490366" MODIFIED="1510549981936" TEXT="&quot;Type&quot; is TType">
+<node CREATED="1510549982988" ID="ID_649929030" MODIFIED="1510549987271">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#955;&#928;&gt; `(Type)
+    </p>
+    <p>
+      TType (UVar &quot;toplevel&quot; 20) : TT
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1510549915932" ID="ID_1540546963" MODIFIED="1510549919073" TEXT="args are">
+<node CREATED="1510549919972" ID="ID_965027475" MODIFIED="1510549932960" TEXT="name type"/>
+<node CREATED="1510549933268" ID="ID_1595506846" MODIFIED="1510549933912" TEXT="name"/>
+<node CREATED="1510549934341" ID="ID_383064122" MODIFIED="1510549938687" TEXT="type of value"/>
+</node>
+</node>
+<node CREATED="1510485655536" ID="ID_388823119" MODIFIED="1510485663508" TEXT="Pi is a pi type">
+<node CREATED="1510485664544" ID="ID_1976312644" MODIFIED="1510485666716" TEXT="Args are">
+<node CREATED="1510485667736" ID="ID_700304434" MODIFIED="1510485680724" TEXT="Type"/>
+<node CREATED="1510485685104" ID="ID_1056861557" MODIFIED="1510485686556" TEXT="Kind"/>
+</node>
+</node>
+<node CREATED="1510491362808" ID="ID_1109289158" MODIFIED="1510491364660" TEXT="lhs/rhs">
+<node CREATED="1510491365552" ID="ID_1291238526" MODIFIED="1510491390236" TEXT="Both the left hand side and the right hand side using a separate &quot;(Bind &quot;x&quot;)&quot; to refer to the same variable">
+<node CREATED="1510491391664" ID="ID_520258536" MODIFIED="1510491400804" TEXT="But they aren&apos;t joined together in any way"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510621595246" ID="ID_375703537" MODIFIED="1510754970718" TEXT="11/14">
+<node CREATED="1510621600150" FOLDED="true" ID="ID_637261656" MODIFIED="1510748804843" TEXT="ProveVoid problem">
+<node CREATED="1510637682289" FOLDED="true" ID="ID_1512103914" MODIFIED="1510737579844" TEXT="source">
+<node CREATED="1510637909986" ID="ID_1478416281" MODIFIED="1510637914725">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data In : (f : Type -&gt; Type) -&gt; Type where
+    </p>
+    <p>
+      &#160;&#160;MkIn : In f
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510637917146" ID="ID_589673938" MODIFIED="1510637933199" TEXT="Nothing strange here except that f is a type that takes a type and returns a type"/>
+<node CREATED="1510637935042" ID="ID_1388746119" MODIFIED="1510637939758" TEXT="f is implied in MkIn"/>
+<node CREATED="1510640395406" ID="ID_572538395" MODIFIED="1510640432186" TEXT="It basically says that for every function of type  (Type -&gt; Type) there is an &quot;In&quot; of that function">
+<node CREATED="1510640437070" ID="ID_718353620" MODIFIED="1510640454043" TEXT="isomorphic with (Type -&gt; Type)"/>
+</node>
+<node CREATED="1510659907641" ID="ID_1806716239" MODIFIED="1510659918237" TEXT="The point, I think, is that it converts (Type -&gt; Type) to Type">
+<node CREATED="1510659947489" ID="ID_1258657758" MODIFIED="1510659951645" TEXT="Then it can be passed to P"/>
+</node>
+<node CREATED="1510713135806" ID="ID_1528913116" MODIFIED="1510713143858" TEXT="Basically, just a wrapper of (Type -&gt; Type)"/>
+</node>
+<node CREATED="1510637575340" ID="ID_430942405" MODIFIED="1510637578967">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- This step requires definitional type constructor injectivity and is
+    </p>
+    <p>
+      -- the source of the problem.
+    </p>
+    <p>
+      injIn : In x = In y -&gt; x = y
+    </p>
+    <p>
+      injIn Refl = Refl
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510621926590" ID="ID_1027246641" MODIFIED="1510637560744" TEXT="This method is a little strange"/>
+<node CREATED="1510637581435" ID="ID_177839534" MODIFIED="1510637589135" TEXT="In x = In y">
+<node CREATED="1510637590556" ID="ID_1551316586" MODIFIED="1510637594496" TEXT="In is a data type">
+<node CREATED="1510637598587" ID="ID_925251672" MODIFIED="1510637613836">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data In : (f : Type -&gt; Type) -&gt; Type where
+    </p>
+    <p>
+      &#160;&#160;MkIn : In f
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1510637708444" ID="ID_716074813" MODIFIED="1510637715909" TEXT="It&apos;s akin to writing">
+<node CREATED="1510637717011" ID="ID_1457741001" MODIFIED="1510637719351" TEXT="Nat = Nat"/>
+<node CREATED="1510637722339" ID="ID_183332061" MODIFIED="1510637729310" TEXT="rather than the normal 3 = 3"/>
+</node>
+<node CREATED="1510637743395" ID="ID_1679680431" MODIFIED="1510637749575" TEXT="So lhs Refl is">
+<node CREATED="1510637750499" ID="ID_446409958" MODIFIED="1510637752543" TEXT="In x"/>
+<node CREATED="1510637752978" ID="ID_152106926" MODIFIED="1510637783479" TEXT="Not (MkIn {f})"/>
+</node>
+</node>
+<node CREATED="1510637941450" FOLDED="true" ID="ID_1418168986" MODIFIED="1510713719984">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      P : Type -&gt; Type
+    </p>
+    <p>
+      P x = (a : (Type -&gt; Type) ** (In a = x, a x -&gt; Void))
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510638019866" FOLDED="true" ID="ID_194289016" MODIFIED="1510713195211" TEXT="( ** ) makes a dependent pair">
+<node CREATED="1510638883513" ID="ID_115870258" MODIFIED="1510638886578">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Data type Builtins.DPair : (a : Type) -&gt; (P : a -&gt; Type) -&gt; Type
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;Dependent pairs aid in the construction of dependent types by providing evidence
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;that some value resides in the type.
+    </p>
+    <p>
+      &#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;Formally, speaking, dependent pairs represent existential quantification - they
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;consist of a witness for the existential claim and a proof that the property
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;holds for it.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;Arguments:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;a : Type&#160;&#160;-- the value to place in the type.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;P : a -&gt; Type&#160;&#160;-- the dependent type that requires the value.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      Constructors:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;MkDPair : (x : a) -&gt; (pf : P x) -&gt; DPair a P
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510639520048" ID="ID_1728108904" MODIFIED="1510639520571" TEXT="ex">
+<node CREATED="1510639072945" ID="ID_1943907878" MODIFIED="1510639518812" TEXT=" (x : Nat ** Z = x)"/>
+<node CREATED="1510639521952" ID="ID_1904351418" MODIFIED="1510639547443" TEXT="Proposal that there exists a Nat where Z equals it"/>
+<node CREATED="1510639604488" ID="ID_95796345" MODIFIED="1510639610400">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      the (x : Nat ** Z = x) (0 ** Refl)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510639612040" ID="ID_458471503" MODIFIED="1510639615427" TEXT="Proof of proposal"/>
+<node CREATED="1510639619928" ID="ID_443027156" MODIFIED="1510639788960">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Notice that ( ** ) stands for MkDPair and&#160;DPair
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      (0 ** Refl) : (x : Nat ** 0 = x)
+    </p>
+    <p>
+      (x : Nat ** 0 = x) : Type
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510639791080" ID="ID_1811379812" MODIFIED="1510639792564" TEXT=" (x : Nat ** 0 = x) translates to DPair Nat (\x =&gt; 0 = x)"/>
+<node CREATED="1510639795175" ID="ID_1907114355" MODIFIED="1510640060115" TEXT="(0 ** Refl) translates to (MkDPair Z Refl)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510640080199" ID="ID_219659582" MODIFIED="1510640161315" TEXT="This represents the proposal that ">
+<node CREATED="1510640162575" ID="ID_603676113" MODIFIED="1510640168555" TEXT="for all &quot;x&quot; in Type">
+<node CREATED="1510640098887" ID="ID_348637461" MODIFIED="1510640187699" TEXT="there exists a value &quot;a&quot; where">
+<node CREATED="1510640188943" ID="ID_914101114" MODIFIED="1510640193835" TEXT=" In a = x">
+<node CREATED="1510640194943" ID="ID_1971499177" MODIFIED="1510655256502" TEXT="This may be true and may be false, depending on x">
+<node CREATED="1510655257865" ID="ID_1164679988" MODIFIED="1510655265453" TEXT="If x is Nat, it&apos;s false"/>
+<node CREATED="1510655265713" ID="ID_851590996" MODIFIED="1510655284894" TEXT="But if x is &quot;In a&quot;, it&apos;s true"/>
+</node>
+</node>
+<node CREATED="1510640276790" ID="ID_1906275747" MODIFIED="1510660922480" TEXT="a x -&gt; Void">
+<node CREATED="1510640293078" ID="ID_563189164" MODIFIED="1510640313155" TEXT="This should be true, because for example">
+<node CREATED="1510640314126" ID="ID_358317764" MODIFIED="1510640339035" TEXT="\b =&gt; Void would be an acceptable value for a"/>
+</node>
+<node CREATED="1510660558433" ID="ID_1473275488" MODIFIED="1510660582229" TEXT="This is saying take&quot;a&quot; against &quot;x&quot;. ">
+<node CREATED="1510660583801" ID="ID_1349395803" MODIFIED="1510660595533" TEXT="A is the function (Type -&gt; Type) of a"/>
+<node CREATED="1510660596041" ID="ID_310897236" MODIFIED="1510660637093" TEXT="Also, because of injIn, a = the function inside of the In represented by &quot;x&quot;">
+<node CREATED="1510660638417" ID="ID_657619039" MODIFIED="1510660647013" TEXT="ie. x = &quot;In ?z&quot;"/>
+<node CREATED="1510660647712" ID="ID_1281841784" MODIFIED="1510660654109" TEXT="where &quot;?z&quot; must be a"/>
+<node CREATED="1510660654569" ID="ID_993393210" MODIFIED="1510660663637" TEXT="because if &quot;In a&quot; = &quot;In ?z&quot;"/>
+<node CREATED="1510660665929" ID="ID_597254297" MODIFIED="1510660670429" TEXT="then &quot;?z&quot; must equal &quot;a&quot;"/>
+</node>
+</node>
+<node CREATED="1510660697697" ID="ID_1292407110" MODIFIED="1510660706781" TEXT="So what it&apos;s really saying is take &quot;a&quot; against &quot;In a&quot;"/>
+<node CREATED="1510660922473" ID="ID_410293572" MODIFIED="1510660943148" TEXT="And &quot;In a&quot; iff &quot;a&quot;">
+<node CREATED="1510660712393" ID="ID_893387633" MODIFIED="1510660723861" TEXT="&quot;In a&quot; means that &quot;a&quot; exists">
+<node CREATED="1510660725297" ID="ID_431116259" MODIFIED="1510660737980" TEXT="And the opposite, if not &quot;In a&quot;, then not &quot;a&quot;"/>
+</node>
+</node>
+<node CREATED="1510660944256" ID="ID_1398830043" MODIFIED="1510660974043" TEXT="So, what is &quot;a&quot;?">
+<node CREATED="1510660975057" ID="ID_1589828276" MODIFIED="1510660989860" TEXT="&quot;a&quot; says given a Type, I give you another type"/>
+<node CREATED="1510660994992" ID="ID_207722419" MODIFIED="1510661104675" TEXT="and &quot;a&quot; against &quot;In a&quot;. would mean, ok, given a against an object which exists iff itself exists, then it returns a object of void"/>
+</node>
+<node CREATED="1510661129568" ID="ID_1521260922" MODIFIED="1510661143556" TEXT="Returning an object of void is impossible, therefore there isn&apos;t a function like this"/>
+<node CREATED="1510661216248" ID="ID_1740064495" MODIFIED="1510661237196" TEXT="Or in other words, (x aka &quot;In a&quot;) does not exist">
+<node CREATED="1510661240656" ID="ID_1008664435" MODIFIED="1510661248452" TEXT="therefore &quot;a&quot; does not exist"/>
+</node>
+<node CREATED="1510661164536" ID="ID_1827447121" MODIFIED="1510661173620" TEXT="But how is this represented in Type theory?">
+<node CREATED="1510661410136" ID="ID_1640677419" MODIFIED="1510661529979" TEXT="It means that in order that the result of &quot;a (In ?z)&quot; return void, then &quot;In ?z&quot; must have no valid cases">
+<node CREATED="1510661530959" ID="ID_1181692280" MODIFIED="1510661546091" TEXT="(where ?z = a as established above)"/>
+</node>
+<node CREATED="1510661556103" ID="ID_1581846456" MODIFIED="1510661563619" TEXT="So &quot;In a&quot; must have no valid cases"/>
+<node CREATED="1510661569751" ID="ID_1702432417" MODIFIED="1510661574747" TEXT="Which means &quot;a&quot; cannot be constructed">
+<node CREATED="1510661592927" ID="ID_1164277111" MODIFIED="1510661597235" TEXT="Or &quot;?z&quot; actually"/>
+</node>
+<node CREATED="1510661736791" ID="ID_1864635638" MODIFIED="1510661753875" TEXT="So I guess in type theory, if you give me &quot;x -&gt; Void&quot;, then I can infer that x has no valid cases">
+<node CREATED="1510661778567" ID="ID_1933498286" MODIFIED="1510661790851" TEXT="In other words (x -&gt; Void) -&gt; Int"/>
+<node CREATED="1510661791183" ID="ID_939904098" MODIFIED="1510661811475" TEXT="or more fun (x -&gt; Void) -&gt; x -&gt; 1 = 2"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510653556924" ID="ID_407666950" MODIFIED="1510653576792" TEXT="Actually, P itself isn&apos;t false, it just returns sets that may be empty, props that may be false"/>
+</node>
+<node CREATED="1510641193189" ID="ID_1746837515" MODIFIED="1510715195649">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      func1 : P (In P) -&gt; Void
+    </p>
+    <p>
+      func1 (v ** (InVEqInP, VAppInPImpVoid)) =
+    </p>
+    <p>
+      &#160;&#160;let lem2 : (P (In P) -&gt; Void) = replace {P=\ x =&gt; x (In P) -&gt; Void} (injIn InVEqInP) VAppInPImpVoid
+    </p>
+    <p>
+      &#160;&#160;in lem2 (P ** (Refl, lem2))
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510641771797" ID="ID_572982620" MODIFIED="1510641772656" TEXT="type">
+<node CREATED="1510641380924" ID="ID_1163509593" MODIFIED="1510714156874" TEXT="This is saying, I have a Proof that P for a particular &quot;a&quot;, namely &quot;In P&quot;, is False"/>
+<node CREATED="1510641414060" ID="ID_414751970" MODIFIED="1510641426448" TEXT="But &quot;In P&quot; is isomorphic to P">
+<node CREATED="1510655351602" ID="ID_1156097035" MODIFIED="1510655418093" TEXT="So &quot;In P&quot; represents all the &quot;P&quot;s"/>
+</node>
+<node CREATED="1510641439188" ID="ID_792056227" MODIFIED="1510641464944" TEXT="So &quot;P InP&quot; is the same as saying &quot;P P&quot;">
+<node CREATED="1510641466036" ID="ID_1634380925" MODIFIED="1510641764360" TEXT="(Since P is a function for a Type to a Type, it can be used for an argument to P)"/>
+<node CREATED="1510654092092" ID="ID_1672320552" MODIFIED="1510654116264" TEXT="Here is the real issue, because now P refers to itself, isn&apos;t it?">
+<node CREATED="1510654176940" ID="ID_361128161" MODIFIED="1510654468039" TEXT="I guess the author is saying it wouldn&apos;t be, if you can&apos;t relate the value of the data type based on the type of the data type"/>
+</node>
+</node>
+<node CREATED="1510642584403" ID="ID_609309766" MODIFIED="1510642645008" TEXT="P InP =">
+<node CREATED="1510642595843" ID="ID_19568631" MODIFIED="1510642627700" TEXT="(a : (Type -&gt; Type) ** (In a = InP, a InP -&gt; Void))"/>
+<node CREATED="1510642645994" ID="ID_253333182" MODIFIED="1510642660048" TEXT="InP = In P, so"/>
+<node CREATED="1510642595843" ID="ID_704329471" MODIFIED="1510642734870" TEXT="(a : (Type -&gt; Type) ** (In a = In P, a (In P) -&gt; Void))"/>
+</node>
+</node>
+<node CREATED="1510641772948" ID="ID_994188211" MODIFIED="1510641773816" TEXT="val">
+<node CREATED="1510641779108" ID="ID_702576730" MODIFIED="1510641781128" TEXT="lem2">
+<node CREATED="1510642584403" ID="ID_1360469608" MODIFIED="1510642645008" TEXT="P InP =">
+<node CREATED="1510642595843" ID="ID_144281217" MODIFIED="1510642627700" TEXT="(a : (Type -&gt; Type) ** (In a = InP, a InP -&gt; Void))"/>
+<node CREATED="1510642645994" ID="ID_1696745523" MODIFIED="1510642660048" TEXT="InP = In P, so"/>
+<node CREATED="1510642595843" ID="ID_96668293" MODIFIED="1510642734870" TEXT="(a : (Type -&gt; Type) ** (In a = In P, a (In P) -&gt; Void))"/>
+<node CREATED="1510642681525" ID="ID_508795606" MODIFIED="1510642778401" TEXT="P is a witness, because if a = P, then"/>
+<node CREATED="1510642595843" ID="ID_141596239" MODIFIED="1510642797193" TEXT="(P ** (Refl, (the (P (In P) -&gt; Void)) ?xxx)"/>
+<node CREATED="1510642798282" ID="ID_1567755899" MODIFIED="1510642800194" TEXT="and,"/>
+<node CREATED="1510642812617" ID="ID_1841864379" MODIFIED="1510642817719" TEXT="injIn shows that">
+<node CREATED="1510642820005" ID="ID_1732023730" MODIFIED="1510642829109" TEXT="In x = In y -&gt; x = y"/>
+</node>
+<node CREATED="1510642835011" ID="ID_10268759" MODIFIED="1510642899189" TEXT="so">
+<node CREATED="1510642900290" ID="ID_1403619592" MODIFIED="1510642900290" TEXT=""/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510637682289" ID="ID_1157138750" MODIFIED="1510737602685" TEXT="source2">
+<node CREATED="1510637909986" ID="ID_1030587058" MODIFIED="1510637914725">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data In : (f : Type -&gt; Type) -&gt; Type where
+    </p>
+    <p>
+      &#160;&#160;MkIn : In f
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510713135806" ID="ID_1984733240" MODIFIED="1510737616283" TEXT="Just a wrapper of (Type -&gt; Type)"/>
+</node>
+<node CREATED="1510637575340" ID="ID_321715916" MODIFIED="1510637578967">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- This step requires definitional type constructor injectivity and is
+    </p>
+    <p>
+      -- the source of the problem.
+    </p>
+    <p>
+      injIn : In x = In y -&gt; x = y
+    </p>
+    <p>
+      injIn Refl = Refl
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510621926590" ID="ID_1691793065" MODIFIED="1510737697360" TEXT="This lets you reason about &quot;x&quot;, given &quot;In x&quot;"/>
+</node>
+<node CREATED="1510637941450" ID="ID_1984997735" MODIFIED="1510738555064">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      P : Type -&gt; Type
+    </p>
+    <p>
+      P x = (a : (Type -&gt; Type) ** (In a = x, a x -&gt; Void))
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510737730210" ID="ID_61495282" MODIFIED="1510737742672" TEXT="x must be &quot;In ?z&quot;"/>
+<node CREATED="1510737743340" ID="ID_929758500" MODIFIED="1510737749783" TEXT="?z must equal a">
+<node CREATED="1510737762228" ID="ID_598278394" MODIFIED="1510737766527" TEXT="In a = x"/>
+</node>
+<node CREATED="1510737769099" ID="ID_1255684053" MODIFIED="1510737797768" TEXT="a must not exist">
+<node CREATED="1510737799052" ID="ID_229319114" MODIFIED="1510737805439" TEXT="a (In a) -&gt; Void">
+<node CREATED="1510737807308" ID="ID_957297218" MODIFIED="1510737817744" TEXT="The only way to be Void is if there are no cases"/>
+<node CREATED="1510737822723" ID="ID_1882216926" MODIFIED="1510737852551" TEXT="Otherwise, if there is at least one value in &quot;In a&quot;, then &quot;a&quot; must point to a value in Void"/>
+<node CREATED="1510737855427" ID="ID_194487662" MODIFIED="1510737867232" TEXT="Since there are no values in Void, there cannot be any values in &quot;In a&quot;"/>
+<node CREATED="1510737868548" ID="ID_831890228" MODIFIED="1510737880718" TEXT="Since &quot;In a&quot; can be created with MkIn using &quot;a&quot;"/>
+<node CREATED="1510737881059" ID="ID_769570923" MODIFIED="1510737887151" TEXT="There cannot be an &quot;a&quot;"/>
+</node>
+</node>
+<node CREATED="1510737894276" ID="ID_1900784411" MODIFIED="1510737899511" TEXT="Therefore &quot;x&quot; cannot exist">
+<node CREATED="1510737901380" ID="ID_1767507664" MODIFIED="1510737917191" TEXT="If &quot;x&quot; were to exist, then &quot;a&quot; must exist"/>
+</node>
+</node>
+<node CREATED="1510641193189" ID="ID_321902746" MODIFIED="1510740233408">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      func1 : P (In P) -&gt; Void
+    </p>
+    <p>
+      func1 (a ** (InAEqInP, AAppInPImpVoid)) =
+    </p>
+    <p>
+      &#160;&#160;let lem2 : (P (In P) -&gt; Void) = replace {P=\ x =&gt; x (In P) -&gt; Void} (injIn InAEqInP) AAppInPImpVoid
+    </p>
+    <p>
+      &#160;&#160;in lem2 (P ** (Refl, lem2))
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510738085284" ID="ID_1973879878" MODIFIED="1510738528216" TEXT="First, we assume that (a ** (InAEqInP, AAppInPImpVoid)) and try to prove Void"/>
+<node CREATED="1510738162324" ID="ID_1293067431" MODIFIED="1510738180911" TEXT="This is the same as saying there is no possible value for P (In P)"/>
+<node CREATED="1510738701887" ID="ID_1326948869" MODIFIED="1510738705935" TEXT="what lem2 is">
+<node CREATED="1510738183060" ID="ID_1236145405" MODIFIED="1510738231664" TEXT="So if we just look at the lhs for a minute"/>
+<node CREATED="1510738234972" ID="ID_72204933" MODIFIED="1510738543248" TEXT="&quot;In a&quot; must equal &quot;P&quot;">
+<node CREATED="1510738251556" ID="ID_1684819657" MODIFIED="1510738270335" TEXT="because of the first rule of the rhs of the depedent pair of P"/>
+<node CREATED="1510738551092" ID="ID_1142214219" MODIFIED="1510738571528" TEXT="namely (In a = x)"/>
+</node>
+<node CREATED="1510738289348" ID="ID_1678943212" MODIFIED="1510738584281" TEXT="a must equal &quot;P&quot;">
+<node CREATED="1510738369932" ID="ID_915131738" MODIFIED="1510738375583" TEXT="Due to injIn"/>
+</node>
+<node CREATED="1510738379163" ID="ID_1830798322" MODIFIED="1510738631224" TEXT="(a (In P)) must imply void">
+<node CREATED="1510738634059" ID="ID_1978965345" MODIFIED="1510738648704" TEXT="Due to second rule of rhs of d pair of P"/>
+</node>
+<node CREATED="1510738649820" ID="ID_1793478311" MODIFIED="1510738666688" TEXT="since a is P, then (P (In P)) -&gt; Void"/>
+</node>
+<node CREATED="1510738688125" ID="ID_1104316144" MODIFIED="1510738688125">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      lem2 (P ** (Refl, lem2))
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510738708844" ID="ID_1853310106" MODIFIED="1510738739288" TEXT="We have already proven (P (In P)) -&gt; Void as true, but only if we assume that there is a value in P (In P)"/>
+<node CREATED="1510738740028" ID="ID_205431608" MODIFIED="1510738782928" TEXT="This is modus ponens, basically"/>
+<node CREATED="1510738792076" ID="ID_1124709617" MODIFIED="1510738809480" TEXT="So the upshot is we have to show Void"/>
+<node CREATED="1510738809932" ID="ID_1312738275" MODIFIED="1510738814024" TEXT="So how do we do that?"/>
+<node CREATED="1510738814948" ID="ID_447703863" MODIFIED="1510738838720" TEXT="We need to construct a value for P (in P) given our assumptions"/>
+<node CREATED="1510738839052" ID="ID_1062540749" MODIFIED="1510738885632" TEXT="So, a must equal &quot;P&quot;, so that (In P = In a)"/>
+<node CREATED="1510738863204" ID="ID_1560628757" MODIFIED="1510738893335" TEXT="Then &quot;In P&quot; must equal &quot;In A&quot; is done with Refl"/>
+<node CREATED="1510738893708" ID="ID_473674272" MODIFIED="1510738912112" TEXT="Then lem2 proves the second rule of P (a x -&gt; Void)">
+<node CREATED="1510738913757" ID="ID_720577005" MODIFIED="1510738964728" TEXT="Because a equals &quot;P&quot;, and x equals &quot;In P&quot; (beacuse we passed &quot;In P&quot; for x in (P (In P))"/>
+</node>
+</node>
+</node>
+<node CREATED="1510738972988" ID="ID_1926175742" MODIFIED="1510740216622">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      total -- for extra oumph!
+    </p>
+    <p>
+      lem2 : Void
+    </p>
+    <p>
+      lem2 =
+    </p>
+    <p>
+      &#160;&#160;let foo : P (In P) = (P ** (Refl, func1))
+    </p>
+    <p>
+      &#160;&#160;in func1 foo
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1510738991180" ID="ID_872192092" MODIFIED="1510739015480" TEXT="In order to prove void, if we can construct P (In P), we know we&apos;ve proven it, by func1"/>
+<node CREATED="1510739016140" ID="ID_833736915" MODIFIED="1510739026696" TEXT="So, for the first rule">
+<node CREATED="1510739027539" ID="ID_1120719105" MODIFIED="1510739046175" TEXT="(ln a = x)">
+<node CREATED="1510739046532" ID="ID_694153923" MODIFIED="1510739083256" TEXT="x = &quot;(In P)&quot;"/>
+<node CREATED="1510739083612" ID="ID_1279373674" MODIFIED="1510739089304" TEXT="so a must be &quot;P&quot;"/>
+<node CREATED="1510739089756" ID="ID_1769744260" MODIFIED="1510739099944" TEXT="then we can use Refl for the first rule"/>
+</node>
+</node>
+<node CREATED="1510739100796" ID="ID_1008187390" MODIFIED="1510739107120" TEXT="For the second rule">
+<node CREATED="1510739115572" ID="ID_1445798071" MODIFIED="1510739122431" TEXT="(a x -&gt; Void)">
+<node CREATED="1510739123748" ID="ID_976086521" MODIFIED="1510739144248" TEXT="a is set to &quot;P&quot;"/>
+<node CREATED="1510739144596" ID="ID_396178943" MODIFIED="1510739151144" TEXT="x is &quot;In P&quot;"/>
+<node CREATED="1510739151572" ID="ID_784114196" MODIFIED="1510739159448" TEXT="So we get (P (In P)) -&gt; Void"/>
+<node CREATED="1510739159876" ID="ID_1657986643" MODIFIED="1510739167424" TEXT="We&apos;ve proven this in func 1"/>
+<node CREATED="1510739167788" ID="ID_1138740397" MODIFIED="1510739175184" TEXT="So we use func1 for the second rule"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510748805961" ID="ID_342456579" MODIFIED="1510748809757" TEXT="11/15">
+<node CREATED="1510748810937" ID="ID_1590182360" MODIFIED="1510748835173" TEXT="Idris has had this ProveVoid problem for a long time">
+<node CREATED="1510748841297" ID="ID_1316631551" MODIFIED="1510748859780" TEXT="I understand it from an abstract level, but not from a TT level"/>
+</node>
+<node CREATED="1510748861353" ID="ID_1373234250" MODIFIED="1510748888917" TEXT="I worry that Idris is too loose with its language. There has to be a tighter language"/>
+<node CREATED="1510748911697" ID="ID_573079090" MODIFIED="1510749026677" TEXT="There is also this">
+<node CREATED="1510749027641" ID="ID_1610851688" MODIFIED="1510749033805" TEXT="https://github.com/idris-lang/Idris-dev/issues/4192">
+<node CREATED="1510749390865" ID="ID_1715273423" MODIFIED="1510749396973" TEXT="Divergence in the totality checker"/>
+</node>
+<node CREATED="1510749456385" ID="ID_1838155535" MODIFIED="1510749458365" TEXT="https://github.com/idris-lang/Idris-dev/issues/4169">
+<node CREATED="1510749460849" ID="ID_1671170346" MODIFIED="1510749476876" TEXT="Hang while deriving decidable equality"/>
+</node>
+</node>
+</node>
+<node CREATED="1510922620270" ID="ID_661436161" MODIFIED="1510922621658" TEXT="11/16">
+<node CREATED="1510922622926" ID="ID_1333762280" MODIFIED="1510923930868" TEXT="Figuring out ProveVoid">
+<node CREATED="1510923681647" ID="ID_590565923" MODIFIED="1510923766881">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data In : (f : Type -&gt; Type) -&gt; Type where
+    </p>
+    <p>
+      &#160;&#160;MkIn : In f
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      injIn : In z = In y -&gt; z = y
+    </p>
+    <p>
+      injIn (Refl {A=Type} {x=_}) = Refl
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1510923930848" ID="ID_85510770" MODIFIED="1510923937875" TEXT="type of injIn">
+<node CREATED="1510922659566" FOLDED="true" ID="ID_903503986" MODIFIED="1510923952865" TEXT="full type">
+<node CREATED="1510922635502" ID="ID_187403929" MODIFIED="1510922642330">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (Bind (UN &quot;y&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 59)) (TType (UVar &quot;./Test4.idr&quot; 61)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 62)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 64)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;z&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 65)) (TType (UVar &quot;./Test4.idr&quot; 67)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 68)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 70)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (App (App (App (App (P (TCon 7 4)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(UN &quot;=&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;A&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;primitive&quot; 6))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;primitive&quot; 8)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;B&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;primitive&quot; 9))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (TType (UVar &quot;primitive&quot; 11)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;x&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (Pi (V 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;(TType (UVar &quot;primitive&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;12)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (Bind (UN &quot;y&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;(Pi (V 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;primitive&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;13)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;primitive&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;14)))))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 71)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 72)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (P (TCon 8 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;In&quot;) [&quot;Test4&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;f&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 20))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (TType (UVar &quot;./Test4.idr&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;22)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 23)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 25)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 26))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 0)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (P (TCon 8 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(NS (UN &quot;In&quot;) [&quot;Test4&quot;])
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;f&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 20))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 22)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 23)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 25)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 26))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 1)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 73)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(App (App (App (App (P (TCon 7 4)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(UN &quot;=&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;A&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;primitive&quot; 6))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;primitive&quot; 8)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;B&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;primitive&quot; 9))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;primitive&quot; 11)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;x&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (V 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (TType (UVar &quot;primitive&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;12)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (Bind (UN &quot;y&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;(Pi (V 1)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;primitive&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;13)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;(TType (UVar &quot;primitive&quot;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;14)))))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg1&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 74))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 76)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 77))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Bind (UN &quot;__pi_arg1&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 79))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 81)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 82))))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 1))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(V 2)))))
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510923955943" ID="ID_1665774320" MODIFIED="1510923964835" TEXT="(from injInTT in Test4.idr)"/>
+<node CREATED="1510922669079" ID="ID_387823005" MODIFIED="1510923668180" TEXT="First, creates a variable, &quot;y&quot; and binds it a representation of &quot;data In&quot;">
+<node CREATED="1510923772495" ID="ID_1091205938" MODIFIED="1510923776193" TEXT="(f : Type -&gt; Type) -&gt; Type "/>
+<node CREATED="1510923709191" ID="ID_1914732063" MODIFIED="1510923745800">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (Pi (Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 59)) (TType (UVar &quot;./Test4.idr&quot; 61)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 62)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 64)))
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510923790671" ID="ID_1533613237" MODIFIED="1510923799219" TEXT="Then, creates &quot;z&quot; and does the same">
+<node CREATED="1510923800791" ID="ID_866823032" MODIFIED="1510923811644">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (Pi (Bind (UN &quot;__pi_arg&quot;)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Pi (TType (UVar &quot;./Test4.idr&quot; 65)) (TType (UVar &quot;./Test4.idr&quot; 67)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 68)))
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(TType (UVar &quot;./Test4.idr&quot; 70)))
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1510923815711" ID="ID_1026829360" MODIFIED="1510923847211" TEXT="(note the UVAr&apos;s each have their own number)">
+<node CREATED="1510923848455" ID="ID_81515353" MODIFIED="1510923894123" TEXT="I think this makes them separate variables to be chosen if this expression is referenced and unified with another expression somewhere else"/>
+</node>
+</node>
+<node CREATED="1510924067502" ID="ID_1541230341" MODIFIED="1510924092963" TEXT="(A side note, agda&apos;s implementation ... which has this fixed.. fails on the value, not on the type)">
+<node CREATED="1510924094223" ID="ID_1669035130" MODIFIED="1510924106836">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;&#160;Iinj : &#8704; { x y : Set -&gt; Set } -&gt; Eq1 (I x) (I y) -&gt; Eq1 x y
+    </p>
+    <p>
+      &#160;&#160;Iinj refleq1 = refleq1
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1510923938255" ID="ID_352941673" MODIFIED="1510923941667" TEXT="value of injIn">
+<node CREATED="1510923942534" ID="ID_948707491" MODIFIED="1510923944739" TEXT="TODO"/>
+</node>
+<node CREATED="1510923992351" ID="ID_1105342797" MODIFIED="1510924000186" TEXT="Then it builds up the type starting from &quot;=&quot;"/>
+</node>
+</node>
+</node>
+<node CREATED="1510188214615" FOLDED="true" ID="ID_631629987" MODIFIED="1510915928817" POSITION="right" TEXT="idris-elab-reflection">
 <node CREATED="1510188224639" ID="ID_200114499" MODIFIED="1510188231795" TEXT="what is the &quot;claim&quot; tactic?">
 <node CREATED="1510188232640" ID="ID_600242239" MODIFIED="1510188242939" TEXT="From doc: claim, which wraps the focused subterm with a new hole binding for a given name and type;"/>
 </node>
@@ -3798,7 +4911,7 @@
 <node CREATED="1510196159241" ID="ID_127579627" MODIFIED="1510196170501" TEXT="Maybe we should read this doc if available????"/>
 </node>
 </node>
-<node CREATED="1510204992583" ID="ID_722892955" MODIFIED="1510204993666" TEXT="tactics">
+<node CREATED="1510204992583" FOLDED="true" ID="ID_722892955" MODIFIED="1510915926125" TEXT="tactics">
 <node CREATED="1510204987327" ID="ID_282079314" MODIFIED="1510204991875" TEXT="apply">
 <node CREATED="1510196941066" ID="ID_13039628" MODIFIED="1510204998930" TEXT="doc:">
 <node CREATED="1510196971728" ID="ID_546496774" MODIFIED="1510196990453" TEXT="Apply the operator op, establishing holes for its arguments based on argSpec, a list of Booleans whose length is equal to the number of arguments that the operator will be applied to. A hole is established for each argument, with the type determined by the type of the operator, with the appropriate references to earlier holes in cases where the operator has a dependent type."/>
@@ -4074,8 +5187,7 @@
       metaprograms to delegate to human intelligence when necessary.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -4090,8 +5202,7 @@
       Some expressions, such as case expressions, require additional top-level definitions to be produced after elaboration, but these helper definitions are not accessible to other parts of the program, which means that users can be blissfully unaware of this elaboration order.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1510377378141" ID="ID_385555538" MODIFIED="1510377380970" TEXT="What is this?">
 <node CREATED="1510377383229" ID="ID_1837336956" MODIFIED="1510377393000" TEXT="What top-level definitions?">
@@ -4100,7 +5211,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1480463573465" ID="ID_697925613" MODIFIED="1510224241378" POSITION="right" TEXT="wiki">
+<node CREATED="1480463573465" FOLDED="true" ID="ID_697925613" MODIFIED="1510915930878" POSITION="right" TEXT="wiki">
 <node CREATED="1480510613617" ID="ID_1303643363" MODIFIED="1510031515830" TEXT="backups">
 <node CREATED="1480510626508" ID="ID_580202796" MODIFIED="1480510627789" TEXT="old">
 <node CREATED="1480463578713" ID="ID_1529077249" MODIFIED="1480463580296" TEXT="backups">
@@ -4690,8 +5801,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1507201214087" ID="ID_169974140" MODIFIED="1510185001767" POSITION="right" TEXT="Idris implementation">
-<node CREATED="1508831169430" ID="ID_1910893993" MODIFIED="1508831172626" TEXT="definitions">
+<node CREATED="1507201214087" FOLDED="true" ID="ID_169974140" MODIFIED="1510922616280" POSITION="right" TEXT="Idris implementation">
+<node CREATED="1508831169430" FOLDED="true" ID="ID_1910893993" MODIFIED="1510915968974" TEXT="definitions">
 <node CREATED="1508831173478" ID="ID_1370813647" MODIFIED="1508831174746" TEXT="HOAS">
 <node CREATED="1508831175494" ID="ID_885601585" MODIFIED="1508831181297" TEXT="Higher Order Abstract Syntax"/>
 </node>
@@ -4729,10 +5840,10 @@
 </node>
 </node>
 </node>
-<node CREATED="1508828199420" ID="ID_1545095524" MODIFIED="1508828202423" TEXT="Idris">
+<node CREATED="1508828199420" FOLDED="true" ID="ID_1545095524" MODIFIED="1510915968325" TEXT="Idris">
 <node CREATED="1508828203372" ID="ID_1845339777" MODIFIED="1508828207534" TEXT="main monad for REPL"/>
 </node>
-<node CREATED="1508888340916" ID="ID_897242180" MODIFIED="1508888342320" TEXT="Parser">
+<node CREATED="1508888340916" FOLDED="true" ID="ID_897242180" MODIFIED="1510915967117" TEXT="Parser">
 <node CREATED="1508888343268" ID="ID_809505522" MODIFIED="1509788301783" TEXT="The parser creates a list of [PDecl] and then uses the elaborator to convert this into IState"/>
 <node CREATED="1509788303084" ID="ID_1493882315" MODIFIED="1509788376912" TEXT="loadSource">
 <node CREATED="1509788376891" ID="ID_649277500" MODIFIED="1509788379304" TEXT="handes imports">
@@ -4819,7 +5930,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1509949099915" FOLDED="true" ID="ID_1072423780" MODIFIED="1509961140743" TEXT="Elaborator (outside core)">
+<node CREATED="1509949099915" FOLDED="true" ID="ID_1072423780" MODIFIED="1510754942734" TEXT="Elaborator (outside core)">
 <node CREATED="1509949117755" ID="ID_403000485" MODIFIED="1509949600367" TEXT="elabType">
 <node CREATED="1509949601195" ID="ID_155465564" MODIFIED="1509949604975" TEXT="called by elabDecl"/>
 <node CREATED="1509949605707" ID="ID_1290331246" MODIFIED="1509949632103" TEXT="calls buildType">
@@ -4865,7 +5976,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1508828226156" ID="ID_1916495097" MODIFIED="1508828233887" TEXT="AbsSyntaxTree module">
+<node CREATED="1508828226156" FOLDED="true" ID="ID_1916495097" MODIFIED="1510915965853" TEXT="AbsSyntaxTree module">
 <node CREATED="1507201219660" ID="ID_1549952069" MODIFIED="1508828236599" TEXT="IState">
 <node CREATED="1507201229956" ID="ID_1308936314" MODIFIED="1508828191192" TEXT="Used to store state for the REPL"/>
 <node CREATED="1508828332130" ID="ID_1601066336" MODIFIED="1508828340343" TEXT="This is a huge structure">
@@ -4885,7 +5996,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1508828583202" ID="ID_1580278464" MODIFIED="1508828586023" TEXT="Evaluate module">
+<node CREATED="1508828583202" FOLDED="true" ID="ID_1580278464" MODIFIED="1510915965356" TEXT="Evaluate module">
 <node CREATED="1508828606354" ID="ID_281732491" MODIFIED="1508828608038" TEXT="Context">
 <node CREATED="1508828614498" ID="ID_541308663" MODIFIED="1508828616846" TEXT="used by IState">
 <node CREATED="1508829977200" ID="ID_1910457114" MODIFIED="1508829986204" TEXT="tt_ctxt"/>
@@ -4927,7 +6038,150 @@
 </node>
 </node>
 </node>
-<node CREATED="1508828209045" ID="ID_1805414163" MODIFIED="1510030883990" TEXT="TT">
+<node CREATED="1508828209045" FOLDED="true" ID="ID_1805414163" MODIFIED="1510915962294" TEXT="TT">
+<node CREATED="1510750718314" ID="ID_505562751" MODIFIED="1510750721311" TEXT="in IState">
+<node CREATED="1510750722410" ID="ID_1443894724" MODIFIED="1510750727806" TEXT="idris_patdefs">
+<node CREATED="1510750728698" ID="ID_1062239863" MODIFIED="1510750734534" TEXT="This corresponds to function bodies">
+<node CREATED="1510750754610" ID="ID_1295180207" MODIFIED="1510750756630" TEXT="Ctxt ([([(Name, Term)], Term, Term)], [PTerm])"/>
+<node CREATED="1510750758402" ID="ID_938938002" MODIFIED="1510750761148" TEXT="lhs/rhs pairs"/>
+</node>
+</node>
+<node CREATED="1510750762688" ID="ID_1001323501" MODIFIED="1510750949470" TEXT="tt_ctxt : Context">
+<node CREATED="1510750768186" ID="ID_575124258" MODIFIED="1510752142911" TEXT="Name to value/type etc."/>
+<node CREATED="1510750887714" ID="ID_963576725" MODIFIED="1510750898172">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data Context = MkContext {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;next_tvar&#160;&#160;&#160;&#160;&#160;&#160;&#160;:: Int,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;definitions&#160;&#160;&#160;&#160;&#160;:: Ctxt TTDecl
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} deriving (Show, Generic)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510750943290" ID="ID_997535481" MODIFIED="1510750945318" TEXT="type TTDecl = (Def, RigCount, Injectivity, Accessibility, Totality, MetaInformation) ">
+<node CREATED="1510750951506" ID="ID_258816519" MODIFIED="1510750969193">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data Def = Function !Type !Term
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| TyDecl NameType !Type
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Operator Type Int ([Value] -&gt; Maybe Value)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| CaseOp CaseInfo
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;!Type
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;![(Type, Bool)] -- argument types, whether canonical
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;![Either Term (Term, Term)] -- original definition
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;![([Name], Term, Term)] -- simplified for totality check definition
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;!CaseDefs
+    </p>
+    <p>
+      &#160;&#160;deriving Generic
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510751075506" ID="ID_1654521502" MODIFIED="1510751076710" TEXT="type Injectivity = Bool "/>
+<node CREATED="1510751094202" ID="ID_1429566803" MODIFIED="1510751096658">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      data Accessibility = Hidden | Public | Frozen | Private
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;deriving (Eq, Ord, Generic)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510751108617" ID="ID_1340578144" MODIFIED="1510751110740">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- | The result of totality checking
+    </p>
+    <p>
+      data Totality = Total [Int] -- ^ well-founded arguments
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Productive -- ^ productive
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Partial PReason
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Unchecked
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;| Generated
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;deriving (Eq, Generic)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1510751209793" ID="ID_968079083" MODIFIED="1510751211671">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      -- Possible attached meta-information for a definition in context
+    </p>
+    <p>
+      data MetaInformation =
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;EmptyMI -- ^ No meta-information
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;| DataMI [Int] -- ^ Meta information for a data declaration with position of parameters
+    </p>
+    <p>
+      &#160;&#160;deriving (Eq, Show, Generic)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1508828477017" ID="ID_1661796219" MODIFIED="1508828916982" TEXT="Ctxt v">
 <node CREATED="1509001172218" ID="ID_344418121" MODIFIED="1509001189766" TEXT="I think this corresponds to what you can reference in the file based on a name"/>
 <node CREATED="1508828479323" ID="ID_1410454323" MODIFIED="1508981617755">
@@ -5275,7 +6529,7 @@
 </node>
 </node>
 <node CREATED="1509003063599" ID="ID_1967083793" MODIFIED="1509003135364" TEXT="Binder">
-<node CREATED="1509003135312" FOLDED="true" ID="ID_495815218" MODIFIED="1510034784991" TEXT="src">
+<node CREATED="1509003135312" FOLDED="true" ID="ID_495815218" MODIFIED="1510754938357" TEXT="src">
 <node CREATED="1509003067382" ID="ID_133199907" MODIFIED="1509003070898">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -5526,7 +6780,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1509940400558" ID="ID_1772385004" MODIFIED="1510032818959" TEXT="Modules">
+<node CREATED="1509940400558" FOLDED="true" ID="ID_1772385004" MODIFIED="1510915953910" TEXT="Modules">
 <node CREATED="1509940405838" ID="ID_1215207146" MODIFIED="1509940406994" TEXT="Idris">
 <node CREATED="1509940407822" ID="ID_198919298" MODIFIED="1509940408450" TEXT="Core">
 <node CREATED="1509940409982" ID="ID_781260799" MODIFIED="1509940411138" TEXT="Binary">
@@ -5581,7 +6835,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1509022257017" ID="ID_1604491212" MODIFIED="1509022265453" TEXT="Compilation/Interpretation">
+<node CREATED="1509022257017" FOLDED="true" ID="ID_1604491212" MODIFIED="1510915960589" TEXT="Compilation/Interpretation">
 <node CREATED="1509022266688" ID="ID_1015746918" MODIFIED="1509022271013" TEXT="Code can be compiled">
 <node CREATED="1509022279777" ID="ID_988499204" MODIFIED="1509022284429" TEXT="multiple languages are supported">
 <node CREATED="1509022657736" ID="ID_1878201304" MODIFIED="1509022658716" TEXT="c"/>
@@ -5596,7 +6850,7 @@
 <node CREATED="1509022294721" ID="ID_1498797643" MODIFIED="1509022295733" TEXT=":x"/>
 </node>
 </node>
-<node CREATED="1510100653067" ID="ID_1969179850" MODIFIED="1510112506527" TEXT="Elaboration">
+<node CREATED="1510100653067" FOLDED="true" ID="ID_1969179850" MODIFIED="1510915956469" TEXT="Elaboration">
 <node CREATED="1510100658835" ID="ID_1218563990" MODIFIED="1510100672167" TEXT="There are two Elabs, it seems">
 <node CREATED="1510100673171" ID="ID_619360531" MODIFIED="1510100680214" TEXT="Idris/ElabDecls">
 <node CREATED="1510100749403" ID="ID_946219026" MODIFIED="1510100755935" TEXT="also including Idris/Elab/...">
@@ -5891,6 +7145,103 @@
 </node>
 <node CREATED="1510220574483" ID="ID_1207928626" MODIFIED="1510220609967" TEXT="looks like it lists all the variables and corresponding types, values, etc">
 <node CREATED="1510220611307" ID="ID_879506933" MODIFIED="1510220625136" TEXT="for a let there will be a value, for a hole, just a type, for a lambda just a type, etc."/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510915972228" FOLDED="true" ID="ID_254663788" MODIFIED="1510922615577" TEXT="Typecheck">
+<node CREATED="1510915975403" ID="ID_1738705087" MODIFIED="1510915978015" TEXT="check">
+<node CREATED="1510916060820" ID="ID_826998258" MODIFIED="1510916073391" TEXT="converts Raw to (Term, Type) or possibly errors"/>
+<node CREATED="1510915979147" ID="ID_809489807" MODIFIED="1510916267324" TEXT="chk">
+<node CREATED="1510916094652" ID="ID_1472676691" MODIFIED="1510916101680" TEXT="recursively calls itself as it parses Raw"/>
+<node CREATED="1510916943427" ID="ID_1346970181" MODIFIED="1510917279287" TEXT="args">
+<node CREATED="1510916945891" ID="ID_44804377" MODIFIED="1510916948150" TEXT="rigc">
+<node CREATED="1510917207820" ID="ID_448493680" MODIFIED="1510917211216" TEXT="RigCount"/>
+<node CREATED="1510916950228" ID="ID_639126558" MODIFIED="1510916957512" TEXT="Something to do with type erasure???"/>
+</node>
+<node CREATED="1510916958236" ID="ID_1585105467" MODIFIED="1510917277159" TEXT="u">
+<node CREATED="1510917217428" ID="ID_1121584226" MODIFIED="1510917218431" TEXT="Type"/>
+<node CREATED="1510916967635" ID="ID_1891234619" MODIFIED="1510916977575" TEXT="comments">
+<node CREATED="1510916970035" ID="ID_710095657" MODIFIED="1510916972952" TEXT=" -- uniqueness level"/>
+</node>
+<node CREATED="1510916977835" ID="ID_905996846" MODIFIED="1510917200574" TEXT="not sure???"/>
+</node>
+<node CREATED="1510917279276" ID="ID_1700082401" MODIFIED="1510917279967" TEXT="lvl">
+<node CREATED="1510917201579" ID="ID_238279714" MODIFIED="1510917246166" TEXT="Maybe UExp"/>
+<node CREATED="1510917246155" ID="ID_1288257470" MODIFIED="1510917247504" TEXT="comments">
+<node CREATED="1510917236764" ID="ID_13088335" MODIFIED="1510917243615" TEXT="-- universe for kind"/>
+</node>
+<node CREATED="1510917247819" ID="ID_1626617582" MODIFIED="1510917248711" TEXT="???"/>
+</node>
+<node CREATED="1510917258172" ID="ID_122819257" MODIFIED="1510917259840" TEXT="env">
+<node CREATED="1510917252012" ID="ID_81730645" MODIFIED="1510917253087" TEXT="Env">
+<node CREATED="1510917319364" ID="ID_500252553" MODIFIED="1510917322078" TEXT="EnvTT Name"/>
+<node CREATED="1510917323491" ID="ID_1643751290" MODIFIED="1510917332616" TEXT="type EnvTT n = [(n, RigCount, Binder (TT n))] "/>
+</node>
+<node CREATED="1510917342523" ID="ID_1261275614" MODIFIED="1510917368432" TEXT="Probably names of variables outside of what is being typed checked???">
+<node CREATED="1510917383531" ID="ID_450981446" MODIFIED="1510917388839" TEXT="But then, what is the Binder for?"/>
+</node>
+</node>
+</node>
+<node CREATED="1510916244867" ID="ID_1268548927" MODIFIED="1510916245959" TEXT="returns">
+<node CREATED="1510916254685" ID="ID_248773418" MODIFIED="1510916259736" TEXT="(Term, Type, [Name])">
+<node CREATED="1510917623684" ID="ID_828261461" MODIFIED="1510920703066" TEXT="[Name]">
+<node CREATED="1510920704054" ID="ID_1830738691" MODIFIED="1510920714778" TEXT="This is a list of names that correspond to debrujin indexes"/>
+<node CREATED="1510920715101" ID="ID_1812018552" MODIFIED="1510920748666" TEXT="So if a Name is referecned, we can translate it into a debrujin index"/>
+</node>
+</node>
+</node>
+<node CREATED="1510916267315" ID="ID_1526493483" MODIFIED="1510916270664" TEXT="raw types">
+<node CREATED="1510916279867" ID="ID_642350914" MODIFIED="1510916313902" TEXT="RConstant">
+<node CREATED="1510916341819" ID="ID_474269330" MODIFIED="1510916369640" TEXT="basically calculates the type"/>
+<node CREATED="1510916314851" ID="ID_1709960049" MODIFIED="1510916317848" TEXT="chk rigc u lvl env (RConstant c) = return (Constant c, constType c, [])"/>
+<node CREATED="1510916349739" ID="ID_993423597" MODIFIED="1510916360607" TEXT="chk rigc u lvl env (RConstant Forgot) = return (Erased, Erased, [])">
+<node CREATED="1510916383819" ID="ID_339719748" MODIFIED="1510916392359" TEXT="Erased types????"/>
+<node CREATED="1510916392859" ID="ID_1148579374" MODIFIED="1510916406695" TEXT="Constants that aren&apos;t used."/>
+</node>
+</node>
+<node CREATED="1510915987260" ID="ID_1319080286" MODIFIED="1510915989631" TEXT="RBind">
+<node CREATED="1510916053508" ID="ID_1704687911" MODIFIED="1510916571631" TEXT="transaltes to TT Bind type"/>
+<node CREATED="1510916571867" ID="ID_772813721" MODIFIED="1510916594440" TEXT="Does some other stuff with universes and some other checks that I don&apos;t quite understand"/>
+<node CREATED="1510917716139" ID="ID_1857883667" MODIFIED="1510919599697" TEXT="Bind refers to a binding">
+<node CREATED="1510919600565" ID="ID_18352556" MODIFIED="1510919610689" TEXT="A binding is something like a Pi type, or a Lam type">
+<node CREATED="1510919624629" ID="ID_713779967" MODIFIED="1510919638288" TEXT="data Binder"/>
+</node>
+</node>
+</node>
+<node CREATED="1510916613683" ID="ID_1113927320" MODIFIED="1510916614735" TEXT="RApp">
+<node CREATED="1510916616092" ID="ID_600931483" MODIFIED="1510916618655" TEXT="chk rigc u lvl env ap@(RApp f a)">
+<node CREATED="1510916668339" ID="ID_707369128" MODIFIED="1510916669239" TEXT="f">
+<node CREATED="1510916669747" ID="ID_1154787765" MODIFIED="1510916671375" TEXT="function"/>
+</node>
+<node CREATED="1510916672724" ID="ID_1664871564" MODIFIED="1510916903791" TEXT="a">
+<node CREATED="1510916907892" ID="ID_1142701705" MODIFIED="1510916909391" TEXT="arg"/>
+</node>
+</node>
+<node CREATED="1510917515476" ID="ID_265678525" MODIFIED="1510917535448" TEXT="Two cases, arg holes to check&apos; being true, vs being false"/>
+<node CREATED="1510917578836" ID="ID_1459008546" MODIFIED="1510917580816" TEXT="First checks f">
+<node CREATED="1510917582452" ID="ID_1975680356" MODIFIED="1510917586760" TEXT="gets back">
+<node CREATED="1510917587572" ID="ID_1650348112" MODIFIED="1510917595975" TEXT="fv">
+<node CREATED="1510917597131" ID="ID_1058791703" MODIFIED="1510917599135" TEXT="function value"/>
+</node>
+<node CREATED="1510917600044" ID="ID_672122115" MODIFIED="1510917606166" TEXT="fty">
+<node CREATED="1510917607042" ID="ID_769886902" MODIFIED="1510917609015" TEXT="function type"/>
+</node>
+<node CREATED="1510917610690" ID="ID_1283553284" MODIFIED="1510917613680" TEXT="fns">
+<node CREATED="1510917614548" ID="ID_811374996" MODIFIED="1510917618472" TEXT="function names"/>
+</node>
+</node>
+</node>
+<node CREATED="1510920602006" ID="ID_706565926" MODIFIED="1510920604897" TEXT="Then checks a"/>
+<node CREATED="1510920605261" ID="ID_1207546114" MODIFIED="1510920669233" TEXT="Roughly, converts the type of a to a let binding">
+<node CREATED="1510920670661" ID="ID_1916106021" MODIFIED="1510920687873" TEXT="also puts the name of the variable into the result"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1510915990507" ID="ID_1928549897" MODIFIED="1510915991511" TEXT="monad">
+<node CREATED="1510915992372" ID="ID_1266474273" MODIFIED="1510916049664" TEXT="StateT UCs">
+<node CREATED="1510916030996" ID="ID_553448728" MODIFIED="1510916039104" TEXT="type UCs = (Int, [UConstraint]) "/>
 </node>
 </node>
 </node>
